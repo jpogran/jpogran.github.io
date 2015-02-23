@@ -5,7 +5,7 @@ title: About
 
 ## Who I am
 
-I'm James Pogran, a software developer.
+I'm James Pogran, a software developer. My day to day job keeps me fairly busy, but I try to balance that with my wife and two kids and two dogs.
 
 You can find me here:
 
