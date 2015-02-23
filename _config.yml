@@ -3,17 +3,17 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Poole
-tagline:          The Jekyll Butler
-url:              http://getpoole.com
+title:            James Pogran
+tagline:          Ender
+url:              http://jamespogran.com
 paginate:         1
 baseurl:          /
 author:
-  name:           Mark Otto
-  url:            https://twitter.com/mdo
-  email:          markdotto@gmail.com
+  name:           James Pogran
+  url:            https://twitter.com/ender2025
+  email:          james.pogran@outlook.com
 
 # Custom vars
 version:          1.0.0
-github:
-  repo:           https://github.com/poole/poole
+# github:
+#   repo:           https://github.com/poole/poole
