@@ -5,12 +5,21 @@ title: About
 
 ## Who I am
 
-[James Pogran](james.pogran@outlook.com)
+I'm James Pogran, a software developer.
 
+You can find me here:
+
+- [email](james.pogran@outlook.com)
 - [@ender2025](https://twitter.com/ender2025)
 - [Facebook](https://www.facebook.com/jpogran)
-- [jpogran](https://github.com/jpogran)
-- [resume](https://careers.stackoverflow.com/jpogran)
+
+Some of my public work is here:
+
+- [github](https://github.com/jpogran)
+
+List of things done is here:
+
+- [Resume](https://careers.stackoverflow.com/jpogran)
 - [LinkedIn](www.linkedin.com/in/jamespogran)
 
 ## What I do
