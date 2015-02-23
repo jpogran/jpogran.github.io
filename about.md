@@ -5,11 +5,13 @@ title: About
 
 ## Who I am
 
-James Pogran 
+[James Pogran](james.pogran@outlook.com)
 
-[james.pogran@outlook.com](james.pogran@outlook.com)
-[@ender2025](https://twitter.com/ender2025)
-[jpogran](https://github.com/jpogran)
+- [@ender2025](https://twitter.com/ender2025)
+- [Facebook](https://www.facebook.com/jpogran)
+- [jpogran](https://github.com/jpogran)
+- [resume](https://careers.stackoverflow.com/jpogran)
+- [LinkedIn](www.linkedin.com/in/jamespogran)
 
 ## What I do
 
