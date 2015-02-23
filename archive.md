@@ -1,7 +1,7 @@
-___
+---
 layout: page
 title: Archive
-___
+---
 
 ## Blog Posts
 

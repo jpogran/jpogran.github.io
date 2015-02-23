@@ -14,10 +14,10 @@ author:
   email:          james.pogran@outlook.com
 
 pages_list:
-	about:   '/about'
-	archive: '/archive'
-	feed:    '/atom.xml'
-	
+  about:   '/about'
+  archive: '/archive'
+  feed:    '/atom.xml'
+
 # Custom vars
 version:          1.0.0
 # github:
