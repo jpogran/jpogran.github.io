@@ -4,27 +4,38 @@ title: About
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+  The cure to boredom is curiousity. There is no cure for curiosity. - D.Parker
 </p>
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+## Who I am
 
-There are currently two themes built on Poole:
+I'm James Pogran, a software developer. My day to day job keeps me fairly busy, but I try to balance that with my wife and two kids and two dogs.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+You can find me here:
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+- [email](james.pogran@outlook.com)
+- [twitter](https://twitter.com/ender2025)
+- [facebook](https://www.facebook.com/jpogran)
 
-## Setup
+Some of my public work is here:
 
-Some fun facts about the setup of this project include:
+- [github](https://github.com/jpogran)
 
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
+List of things done is here:
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+- [Resume](https://careers.stackoverflow.com/jpogran)
+- [LinkedIn](www.linkedin.com/in/jamespogran)
+
+## What I do
+
+I work at IPsoft developing server software and system automation for the past 10 years
+
+## Why I do it
+
+I love finding out how things work, taking them apart, and making them work faster.
+
+## What I do for fun
+
+Playing with my kids and spending time with my wife.
 
 Thanks for reading!
