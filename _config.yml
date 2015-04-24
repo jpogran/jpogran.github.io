@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            James Pogran
 tagline:          'Coder'
-description:      'A site'
+description:      'Remember, the enemy''s gate is down'
 url:              http://jamespogran.com
 baseurl:          /
 
