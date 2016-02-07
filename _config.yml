@@ -1,26 +1,19 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Permalinks
-permalink:        pretty
-relative_permalinks: true
+# Site settings
+title: James Pogran
+email: james.pogran@outlook.com
+description: > # this means to ignore newlines until "baseurl:"
+  Remember, the enemy gate is down
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://jamespogran.com" # the base hostname & protocol for your site
+twitter_username: ender2025
+github_username:  jpogran
 
-# Setup
-title:            James Pogran
-tagline:          'Coder'
-description:      'Remember, the enemy''s gate is down'
-url:              http://jamespogran.com
-baseurl:          /
-
-author:
-  name:           'James Pogran'
-  url:            https://twitter.com/ender2025
-
-paginate:         5
-
-# Custom vars
-version:          1.0.0
-
-github:
-  repo:           https://github.com/jpogran/jpogran.github.io
+# Build settings
+markdown: kramdown
