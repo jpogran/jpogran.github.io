@@ -1,0 +1,23 @@
+---
+layout: default
+section: blog
+footer_nav: true
+---
+<div class="home">
+  <div class="post-list">            
+    <div class="top-right-links">
+      <span><a href="archive/">Archive</a> ({{ site.posts | size }} posts)</span>
+    </div>
+{% for post in paginator.posts %}
+    <section>
+      <h1><a class="post-link" href="{% if post.stuburl %}{{ post.stuburl }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h1>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <article class="post-content">
+      {{ post.excerpt }}
+      <a class="excerpt-link" href="{% if post.stuburl %}{{ post.stuburl }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">Continue reading...</a>
+      </article>
+    </section>
+{% endfor %}
+    <span class="archive-link"><a href="archive/">View Archive</a> ({{ site.posts | size }} posts)</span>
+  </div>
+</div>

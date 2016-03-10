@@ -3,17 +3,17 @@ email: james.pogran@outlook.com
 description: "Adventures in Devops on Windows"
 url: "http://jamespogran.com"
 baseurl: ""
-permalink: /:categories/:year/:month/:day/:title/
+permalink: pretty
+paginate: 5
+paginate_path: "/blog/page:num/"
 markdown: kramdown
 kramdown:
   input: GFM
   parse_block_html: true
-excerpt_separator: <!--more-->
 
 twitter_username: ender2025
 github_username:  jpogran
-stackoverflow_username: "1083/james-pogran"
-stackoverflow_username_short: "james-pogran"
+stackoverflow_username: users/1083/james-pogran
 
 google_analytics_ua: UA-74930020-1
 
@@ -22,5 +22,6 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
-  
+
+gems: [jekyll-paginate]  
 # https://www.packtpub.com/books/info/authors/james-pogran
