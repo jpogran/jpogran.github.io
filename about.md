@@ -22,6 +22,10 @@ Some of my public work is here:
 
 - [github](https://github.com/jpogran)
 
+I wrote a book on PowerShell DSC:
+
+- [book](https://www.packtpub.com/books/info/authors/james-pogran)
+
 List of things done is here:
 
 - [Resume](https://careers.stackoverflow.com/jpogran)

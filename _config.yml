@@ -1,19 +1,26 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
 title: James Pogran
 email: james.pogran@outlook.com
-description: > # this means to ignore newlines until "baseurl:"
-  Remember, the enemy gate is down
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jamespogran.com" # the base hostname & protocol for your site
+description: "Adventures in Devops on Windows"
+url: "http://jamespogran.com"
+baseurl: ""
+permalink: /:categories/:year/:month/:day/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  parse_block_html: true
+excerpt_separator: <!--more-->
+
 twitter_username: ender2025
 github_username:  jpogran
+stackoverflow_username: "1083/james-pogran"
+stackoverflow_username_short: "james-pogran"
 
-# Build settings
-markdown: kramdown
+google_analytics_ua: UA-74930020-1
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  
+# https://www.packtpub.com/books/info/authors/james-pogran
