@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Puppet DSC module is now supported!"
-date:   2016-02-10
+date:   2016-01-20
 categories: puppet
 ---
 
