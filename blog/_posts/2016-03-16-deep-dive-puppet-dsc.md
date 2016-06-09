@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "DSC deep dive: Installing and configuring IIS using Puppet and PowerShell DSC"
-date:   2016-04-16
+date:   2016-03-16
 categories: puppet
 ---
 
