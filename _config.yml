@@ -14,7 +14,7 @@ description              : "Adventures in devops"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "jpogran/jpogran.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/images/learning_dsc_1st_ed_print_book.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "images/learning_dsc_1st_ed_print_book.jpg" # path of fallback teaser image, e.g. "images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -78,7 +78,7 @@ analytics:
 # Site Author
 author:
   name             : "James Pogran"
-  avatar           : "/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "images/bio-photo.jpg" # path of avatar image, e.g. "images/bio-photo.jpg"
   bio              : "Adventures in devops"
   location         : "Ocean Township NJ, USA"
   email            : "james.pogran@puppet.com"
@@ -172,7 +172,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 10 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -194,6 +194,11 @@ whitelist:
   - jekyll-feed
   - jemoji
 
+collections:
+  book:
+    label: books by james pogran
+    output: true
+    permalink: /:collection/:path
 
 # Archives
 #  Type
@@ -245,3 +250,12 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _book
+  - scope:
+      path: ""
+      type: book
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      

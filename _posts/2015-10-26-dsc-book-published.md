@@ -2,9 +2,9 @@
 title: "Learning DSC Book Published!"
 excerpt: "My new book on PowerShell DSC is published!"
 header:
-    overlay_image: /images/learning_dsc_1st_ed_print_book.jpg
+    overlay_image: images/learning_dsc_1st_ed_print_book.jpg
     overlay_filter: 0.75
-    teaser: /images/learning_dsc_1st_ed_print_book.jpg
+    teaser: images/learning_dsc_1st_ed_print_book.jpg
 category:
     - blog
     - book
