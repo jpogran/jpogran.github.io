@@ -1,8 +1,10 @@
-.jekyll-metadata
-Gemfile.lock
-Gemfile.local
-.bundle/
+*.gem
+.bundle
 .DS_Store
-
+.jekyll-metadata
 .sass-cache
+_asset_bundler_cache
 _site
+Gemfile.lock
+node_modules
+npm-debug.log*
