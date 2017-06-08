@@ -1,8 +1,13 @@
 ---
-layout: post
 title:  "Managing PowerShell DSC with Puppet"
-date:   2016-03-23
-categories: puppet
+category:
+    - blog
+    - dsc
+    - puppet
+    - book
+tags:
+    - puppet
+    - book
 ---
 
 [Puppet Labs][main_web] is doing a great series of [webinars][webinars] on automating your Windows environment. I just finished doing the **Managing PowerShell DSC with Puppet** webinar. Recording is up [here][dsc_webinar] and the code is [here][dsc_webinar_code].

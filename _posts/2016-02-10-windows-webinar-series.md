@@ -1,8 +1,12 @@
 ---
-layout: post
 title:  "New Puppet Windows Webinar Series"
-date:   2016-02-10
-categories: puppet
+category:
+    - blog
+    - dsc
+    - puppet
+    - presentation
+tags:
+    - puppet
 ---
 
 [Puppet Labs](https://puppetlabs.com) is doing a series of [webinars](https://puppetlabs.com/blog/announcing-our-windows-webinar-series) on automating your Windows environment. There are many interesting topics being covered:

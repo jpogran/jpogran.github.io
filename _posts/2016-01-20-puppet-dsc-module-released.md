@@ -1,8 +1,12 @@
 ---
-layout: post
 title:  "Puppet DSC module is now supported!"
 date:   2016-01-20
-categories: puppet
+category:
+    - blog
+    - dsc
+    - puppet
+tags:
+    - puppets
 ---
 
 The new Puppet module I've been working so hard on is finally released as [supported](https://forge.puppetlabs.com/puppetlabs/dsc)! It was alot of hard work to get to here and now. Working closely with my coworkers and Microsoft to make this happen was the best learning experience and the most interesting thing I've done in a long time.

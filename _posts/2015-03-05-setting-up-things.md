@@ -1,6 +1,9 @@
 ---
-layout: post
 title: Setting Up Things
+category:
+    - blog
+tags:
+    - general
 ---
 
 I have been wanting to setup a blog again for awhile, but also still maintain some level of control over both the nuts and bolts as well as an easy method to author posts. I have been reading about GitHub's jekyll for awhile now, and found a project that gives you a pretty nice basic site template called poole.
