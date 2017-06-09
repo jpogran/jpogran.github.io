@@ -1,6 +1,9 @@
 ---
 title:  "Puppet DSC module is now supported!"
-date:   2016-01-20
+header:
+    teaser: images/posts/Puppet-Logo-Amber-White-lg.jpg
+    overlay_image: images/posts/Puppet-Logo-Amber-White-lg.jpg
+    overlay_filter: 0.75
 category:
     - blog
     - dsc

@@ -1,5 +1,9 @@
 ---
 title:  "New Puppet Windows Webinar Series"
+header:
+    teaser: images/posts/Puppet-Logo-Amber-White-lg.jpg
+    overlay_image: images/posts/Puppet-Logo-Amber-White-lg.jpg
+    overlay_filter: 0.75
 category:
     - blog
     - dsc

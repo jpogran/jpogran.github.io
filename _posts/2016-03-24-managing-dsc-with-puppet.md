@@ -1,5 +1,9 @@
 ---
 title:  "Managing PowerShell DSC with Puppet"
+header:
+    teaser: images/posts/DAG_tagline_logo_background.png
+    overlay_image: images/posts/DAG_tagline_logo_background.png
+    overlay_filter: 0.75
 category:
     - blog
     - dsc

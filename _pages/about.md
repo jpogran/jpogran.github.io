@@ -2,12 +2,16 @@
 permalink: "/about/"
 layout: archive
 author_profile: true
-read_time: true
 share: false
 related: true
+header:
+    overlay_image: images/posts/first_puppet_laptop.jpg
+    overlay_filter: 0.75
+    teaser: images/posts/Puppet-Logo-Amber-White-lg.jpg
+title: "Nosce te ipsum"
 ---
 
-I’m James Pogran, a software developer. My day to day job keeps me fairly busy, but I try to balance that with my wife and three kids and two dogs.
+I’m a software developer. My day to day job keeps me fairly busy, but I try to balance that with my wife and three kids and two dogs.
 
 I have been working with computers in some form or fashion for over 15 years. My first job was systems administration for a large military installation. I then moved on to developing monitoring software and automating large scale Windows environments for a major managed services provider.
 
