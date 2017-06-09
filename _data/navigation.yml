@@ -1,0 +1,10 @@
+# main links
+main:
+  - title: "about"
+    url: "/about"
+  - title: "blog"
+    url: "/blog"
+  - title: "book"
+    url: "/book"
+  - title: "presentations"
+    url: "/presentations"
