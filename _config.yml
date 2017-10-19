@@ -78,7 +78,7 @@ analytics:
 author:
   name             : "James Pogran"
   avatar           : "images/bio-photo.jpg" # path of avatar image, e.g. "images/bio-photo.jpg"
-  bio              : "Adventures in devops"
+  bio              : "coder : author : powershell-geek"
   location         : "NJ, USA"
   email            : "james.pogran@puppet.com"
   uri              :

@@ -1,9 +1,9 @@
 ---
 title: "Starting work on the Second Edition of Learning PowerShell DSC!"
 header:
-    overlay_image: images/learning_dsc_1st_ed_print_book.jpg
+    overlay_image: images/book/learning_powershell_dsc_second_edition.png
     overlay_filter: 0.75
-    teaser: images/learning_dsc_1st_ed_print_book.jpg
+    teaser: images/book/learning_powershell_dsc_second_edition.png
 category:
     - blog
     - book

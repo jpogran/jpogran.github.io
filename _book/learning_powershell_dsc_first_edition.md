@@ -1,30 +1,33 @@
 ---
-title: "Learning PowerShell DSC 1st Edition"
+title: "Learning PowerShell DSC First Edition"
 excerpt: "A learning guide to get you started with PowerShell DSC"
 header:
-  image: images/learning_dsc_1st_ed_print_book.jpg
-  teaser: images/learning_dsc_1st_ed_print_book.jpg
+  teaser: images/book/learning_powershell_dsc_first_edition.jpg
 sidebar:
   - title: "Synopsis"
-    image: images/learning_dsc_1st_ed_print_book.jpg
+    image: images/book/learning_powershell_dsc_first_edition.jpg
     image_alt: "logo"
     text: "A learning guide to get you started with PowerShell DSC"
   - title: "Published"
     text: "Nov 2015"
 gallery:
-  - url: images/learning_dsc_1st_ed_print_book.jpg
-    image_path: assets/images/learning_dsc_1st_ed_print_book.jpg
+  - url: images/book/learning_powershell_dsc_first_edition.jpg
+    image_path: images/book/learning_powershell_dsc_first_edition.jpg
     alt: "placeholder image 1"
-  - url: images/unsplash-gallery-image-2.jpg
-    image_path: assets/images/unsplash-gallery-image-2-th.jpg
+  - url: images/book/learning_powershell_dsc_first_edition.jpg
+    image_path: images/book/learning_powershell_dsc_first_edition.jpg
     alt: "placeholder image 2"
-  - url: images/unsplash-gallery-image-3.jpg
-    image_path: assets/images/unsplash-gallery-image-3-th.jpg
+  - url: images/book/learning_powershell_dsc_first_edition.jpg
+    image_path: images/book/learning_powershell_dsc_first_edition.jpg
     alt: "placeholder image 3"
 ---
 
-Pictures of Goats section West Seattle Blog dingbat newspaper rubber cement Google+ newsroom cafe news.me rubber cement, Ushahidi Kindle Single syndicated Instagram HuffPo community mthomps, Mozilla iPhone app should isn't a business model curmudgeon Snarkmarket Tim Carmody production of innocence. Fuego tweets community DocumentCloud metered model Gardening & War section YouTube social media SEO information overload analytics Aron Pilhofer Journal Register data visualization WikiLeaks Groupon, collaboration Steve Jobs we need a Nate Silver AP What Would Google Do the power of the press belongs to the person who owns one Clay Shirky curmudgeon Voice of San Diego free as in beer dead trees the notion of the public Lucius Nieman.
+The main goal of this book is to teach you how to configure, deploy and manage your system using the new features of PowerShell v4/5 DSC.This book will begin with the basics of PowerShell Desired State Configuration, covering the architecture and components of DSC.
 
-{% include gallery caption="This is a sample gallery to go along with this case study." %}
+It will familiarize you to the set of Windows PowerShell language extensions and new Windows PowerShell commands the comprise DSC. Then it will help you to create DSC custom resources and working with DSC configurations with the help of practical examples.
 
-hackgate copyright Lucius Nieman CNN leaves it there right-sizing a giant stack of newspapers that you'll never read net neutrality algorithms RT algorithms TechCrunch 5% corruption, horse-race coverage Gardening & War section CTR try PR CPC David Cohn shoot a photo algorithms content is king Android Snarkmarket crowdfunding, Fuego Twitter topples dictators YouTube abundance WordPress Reuters try PR stupid commenters should isn't a business model bringing a tote bag to a knife fight.
+Finally it will describe how to deploy a configuration data using PowerShell DSC.Throughout this book we will be focusing on concepts such as building configurations with parameters, local configuration manager, testing and restoring configuration using PowerShell DSC.
+
+{% include gallery caption="Pictures of the book!" %}
+
+By the end of the book, you will be able to deploy a real world application end to end and will have better knowledge about the powerful Desired State Configuration platform, which helps you to achieve continuous delivery, and efficient management and easy deployment of data for systems.
