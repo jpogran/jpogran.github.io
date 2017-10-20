@@ -1,6 +1,6 @@
 ---
 title: "Using Puppet and DSC to Report on Environment Change"
-excerpt: "PuppetConf 2017"
+excerpt: "PuppetConf 2017 Presentation"
 header:
     overlay_image: images/header/puppetconf-logo.png
     overlay_filter: 0.75
