@@ -1,9 +1,9 @@
 ---
 title:  "Author Interview by Puppet"
 header:
-    overlay_image: images/learning_dsc_1st_ed_print_book.jpg
+    overlay_image: images/book/learning_powershell_dsc_first_edition.jpg
     overlay_filter: 0.75
-    teaser: images/learning_dsc_1st_ed_print_book.jpg
+    teaser: images/book/learning_powershell_dsc_first_edition.jpg
 category:
     - blog
     - dsc
