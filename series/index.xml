@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on James Pogran</title>
@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>dsc</title>
-      <link>https://jamespogran.com/series/dsc/</link>
+      <title>featured</title>
+      <link>https://jamespogran.com/series/featured/</link>
       <pubDate>Thu, 19 Oct 2017 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/series/dsc/</guid>
+      <guid>https://jamespogran.com/series/featured/</guid>
       <description></description>
     </item>
     

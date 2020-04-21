@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>James Pogran</title>
+    <link>https://jamespogran.com/book/</link>
+    <description>Recent content on James Pogran</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 31 Jan 2020 16:03:16 -0400</lastBuildDate>
+    
+	<atom:link href="https://jamespogran.com/book/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Powershell Conference Book 2</title>
+      <link>https://jamespogran.com/book/powershell-conf-book-2/</link>
+      <pubDate>Fri, 31 Jan 2020 16:03:16 -0400</pubDate>
+      
+      <guid>https://jamespogran.com/book/powershell-conf-book-2/</guid>
+      <description>Forty subject matter experts have teamed up to bring you the ultimate collection of PowerShell topics that are designed to be like a conference in a book. This book not only delivers top-notch content that rivals any book on the market, but all royalties are donated to the OnRamp scholarship program which bootstraps others into the industry.
+About the Book This book is designed to be like a conference in a book where each chapter is written by a different author who is a subject matter expert on the topic covered in their chapter.</description>
+    </item>
+    
+    <item>
+      <title>Learning Powershell DSC Second Edition</title>
+      <link>https://jamespogran.com/book/learning-powershell-dsc-second-edition/</link>
+      <pubDate>Thu, 19 Oct 2017 16:00:55 -0400</pubDate>
+      
+      <guid>https://jamespogran.com/book/learning-powershell-dsc-second-edition/</guid>
+      <description>About The main goal of this book is to teach you to configure, deploy, and manage your system using the new features of PowerShell v5/v6 DSC.
+This book begins with the basics of PowerShell Desired State Configuration, covering its architecture and components. It familiarizes you with the set of Windows PowerShell language extensions and new Windows PowerShell commands that make up DSC. Then it helps you create DSC custom resources and work with DSC configurations with the help of practical examples.</description>
+    </item>
+    
+    <item>
+      <title>Learning Powershell DSC</title>
+      <link>https://jamespogran.com/book/learning-powershell-dsc/</link>
+      <pubDate>Mon, 19 Oct 2015 16:01:03 -0400</pubDate>
+      
+      <guid>https://jamespogran.com/book/learning-powershell-dsc/</guid>
+      <description>About Windows PowerShell is a task-based command-line shell and scripting language designed especially for system administration. PowerShell DSC is a new management platform that enables you to deploy and manage configuration data for software services and manage the environment in which these services run.
+This book begins with an overview of the basics of PowerShell DSC by covering the architecture and components of the Desired Sate Configuration. It will then familiarize you with the set of PowerShell language extensions and new PowerShell commands.</description>
+    </item>
+    
+  </channel>
+</rss>

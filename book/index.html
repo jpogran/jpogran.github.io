@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.66.0" />
+<meta name="description" content="">
+<meta name="author" content="James Pogran">
+<meta property="article:published_time" content="2020-01-31T16:03:16-04:00">
+<meta property="article:modified_time" content="2020-01-31T16:03:16-04:00">
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://jamespogran.com/img/learning_powershell_dsc_second_edition.png"/>
+
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content=""/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jamespogran.com/book/" />
+<meta property="og:image" content="https://jamespogran.com/img/learning_powershell_dsc_second_edition.png"/>
+<meta property="og:updated_time" content="2020-01-31T16:03:16-04:00" />
+
+<title> | James Pogran</title>
+<link rel="icon" type="image/png" href="/img/icon.png">
+<link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+<link rel="canonical" href="https://jamespogran.com/book/">
+<link rel="alternate" href="/book/index.xml" type="application/rss+xml" title="James Pogran">
+<link rel="feed" href="/book/index.xml" type="application/rss+xml" title="James Pogran">
+<script src="https://kit.fontawesome.com/e1f83257d9.js" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://jamespogran.com/css/styles.min.ddfee0ed32caada2ea07de177f306ed00ca6c2a4778c6a802af4855313a086fe.css" integrity="sha256-3f7g7TLKraLqB94XfzBu0AymwqR3jGqAKvSFUxOghv4=">
+
+</head>
+<body class="antialiased font-serif bg-gray-200">
+<nav class="flex items-center justify-between flex-wrap p-10">
+  <div class="flex items-center flex-shrink-0 mr-6">
+    <a href="https://jamespogran.com/" class="no-underline">
+      <h1 class="font-semibold text-2xl tracking-tight">James Pogran</h1>
+    </a>
+  </div>
+  <div class="block lg:hidden xl:hidden">
+    <button id="dnav-toggle" class="block lg:hidden cursor-pointer ml-auto relative w-12 h-12 p-4">
+      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+    </button>
+  </div>
+  <div class="block lg:hidden">
+    <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
+      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+    </button>
+  </div>
+  <div id="nav-content" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="lg:flex-grow">
+    
+      <a class="no-underline text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 " href="/post" title="">Blog</a>
+    
+      <a class="no-underline text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 " href="/book" title="">Books</a>
+    
+      <a class="no-underline text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 " href="/talk" title="">Talks</a>
+    
+    </div>
+  </div>
+  <div>
+    <h1 class="tracking-tight text-gray-600 pr-10 sm:hidden md:hidden">Intersection of Prose and Technology</h1>
+  </div>
+  <div id="social-content">
+    
+    <a href="//twitter.com/ender2025" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
+      <i class="fab fa-lg fa-twitter" title="twitter"></i>
+    </a>
+    
+    
+    <a href="//github.com/jpogran" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
+      <i class="fab fa-lg fa-github" title="github"></i>
+    </a>
+    
+    
+    <a href="//stackoverflow.com/users/1083/james-pogran" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
+      <i class="fab fa-lg fa-stack-overflow" title="stackoverflow"></i>
+    </a>
+    
+    
+    <a href="//linkedin.com/in/jamespogran" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
+      <i class="fab fa-lg fa-linkedin-in" title="linkedin"></i>
+    </a>
+    
+    
+    <a href="/book/index.xml" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
+      <i class="fas fa-lg fa-rss" title="rss"></i>
+    </a>
+    
+  </div>
+</nav>
+
+<div class="container mx-auto px-4">
+  <h1 class="font-bold tracking-tight text-center text-5xl pb-4">Published Works</h1>
+  
+
+  
+  <div class="max-w-sm w-full md:max-w-full lg:max-w-full lg:flex pb-5">
+    <div class="h-48 lg:h-auto lg:w-48 flex-none object-cover bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+          style="background-image: url('https://jamespogran.com/img/powershell-conf-book-2.png')"
+          title="">
+    </div>
+    <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-gray-900 font-bold text-xl mb-2"><a href="/book/powershell-conf-book-2/">Powershell Conference Book 2</a></div>
+        <p class="text-gray-700 text-base">
+          
+          Forty subject matter experts have teamed up to bring you the ultimate collection of PowerShell topics that are designed to be like a conference in a book. This book not only delivers top-notch content that rivals any book on the market, but all royalties are donated to the OnRamp scholarship program which bootstraps others into the industry.
+About the Book This book is designed to be like a conference in a book where each chapter is written by a different author who is a subject matter expert on the topic covered in their chapter.
+          
+        </p>
+      </div>
+      <div class="flex items-center">
+        <img class="w-10 h-10 rounded-full mr-4" src="/img/James-Pogran-avatar.jpg" alt="Avatar of Jonathan Reinink">
+        <div class="text-sm">
+          <p class="text-gray-900 leading-none">James Pogran</p>
+          <p class="text-gray-600">2020-Jan-31</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="max-w-sm w-full md:max-w-full lg:max-w-full lg:flex pb-5">
+    <div class="h-48 lg:h-auto lg:w-48 flex-none object-cover bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+          style="background-image: url('https://jamespogran.com/img/learning_powershell_dsc_second_edition.png')"
+          title="">
+    </div>
+    <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-gray-900 font-bold text-xl mb-2"><a href="/book/learning-powershell-dsc-second-edition/">Learning Powershell DSC Second Edition</a></div>
+        <p class="text-gray-700 text-base">
+          
+          About The main goal of this book is to teach you to configure, deploy, and manage your system using the new features of PowerShell v5/v6 DSC.
+This book begins with the basics of PowerShell Desired State Configuration, covering its architecture and components. It familiarizes you with the set of Windows PowerShell language extensions and new Windows PowerShell commands that make up DSC. Then it helps you create DSC custom resources and work with DSC configurations with the help of practical examples.
+          
+        </p>
+      </div>
+      <div class="flex items-center">
+        <img class="w-10 h-10 rounded-full mr-4" src="/img/James-Pogran-avatar.jpg" alt="Avatar of Jonathan Reinink">
+        <div class="text-sm">
+          <p class="text-gray-900 leading-none">James Pogran</p>
+          <p class="text-gray-600">2017-Oct-19</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="max-w-sm w-full md:max-w-full lg:max-w-full lg:flex pb-5">
+    <div class="h-48 lg:h-auto lg:w-48 flex-none object-cover bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+          style="background-image: url('https://jamespogran.com/img/learning_powershell_dsc_first_edition.jpg')"
+          title="">
+    </div>
+    <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-gray-900 font-bold text-xl mb-2"><a href="/book/learning-powershell-dsc/">Learning Powershell DSC</a></div>
+        <p class="text-gray-700 text-base">
+          
+          About Windows PowerShell is a task-based command-line shell and scripting language designed especially for system administration. PowerShell DSC is a new management platform that enables you to deploy and manage configuration data for software services and manage the environment in which these services run.
+This book begins with an overview of the basics of PowerShell DSC by covering the architecture and components of the Desired Sate Configuration. It will then familiarize you with the set of PowerShell language extensions and new PowerShell commands.
+          
+        </p>
+      </div>
+      <div class="flex items-center">
+        <img class="w-10 h-10 rounded-full mr-4" src="/img/James-Pogran-avatar.jpg" alt="Avatar of Jonathan Reinink">
+        <div class="text-sm">
+          <p class="text-gray-900 leading-none">James Pogran</p>
+          <p class="text-gray-600">2015-Oct-19</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</div>
+<footer class="pt-10 pb-10">
+  <h1 class="text-center font-semibold">©2020 <a href="https://github.com/jpogran">James Pogran</a>.</h1>
+  <h1 class="text-center font-semibold pt-4 ">Powered by <a href="https://gohugo.com">Hugo</a> using the <a href="https://github.com/jpogran/exlibris">exlibris</a> theme</h1>
+  <script>
+    document.getElementById('nav-toggle').onclick = function(){
+      document.getElementById("nav-content").classList.toggle("hidden");
+      document.getElementById("social-content").classList.toggle("hidden");
+    }
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-74930020-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  
+</footer>
+</body>
+</html>

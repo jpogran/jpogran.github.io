@@ -1,636 +1,235 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="robots" content="all,follow">
-  <meta name="googlebot" content="index,follow,snippet,archive">
-  <title>dsc </title>
-  <meta name="description" content="" />
-  <meta name="twitter:card" content="summary_large_image"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.66.0" />
+<meta name="description" content="">
+<meta name="author" content="James Pogran">
+<meta property="article:published_time" content="2017-10-19T14:13:06-04:00">
+<meta property="article:modified_time" content="2017-10-19T14:13:06-04:00">
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://jamespogran.com/img/learning_powershell_dsc_second_edition.png"/>
 
 <meta name="twitter:title" content="dsc"/>
 <meta name="twitter:description" content=""/>
 
-  <meta property="og:title" content="dsc" />
+<meta property="og:title" content="dsc" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jamespogran.com/tags/dsc/" />
+<meta property="og:image" content="https://jamespogran.com/img/learning_powershell_dsc_second_edition.png"/>
+<meta property="og:updated_time" content="2017-10-19T14:13:06-04:00" />
 
-<meta property="og:image" content="https://jamespogran.com/img/learning_powershell_dsc_second_edition.png" />
+<title>dsc | James Pogran</title>
+<link rel="icon" type="image/png" href="/img/icon.png">
+<link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+<link rel="canonical" href="https://jamespogran.com/tags/dsc/">
+<link rel="alternate" href="/tags/dsc/index.xml" type="application/rss+xml" title="James Pogran">
+<link rel="feed" href="/tags/dsc/index.xml" type="application/rss+xml" title="James Pogran">
+<script src="https://kit.fontawesome.com/e1f83257d9.js" crossorigin="anonymous"></script>
 
-<meta property="og:updated_time" content="2017-10-19T14:13:06-04:00"/>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link href="https://jamespogran.com/css/style.css" rel="stylesheet" id="theme-stylesheet" type='text/css' media='all'>
+<link rel="stylesheet" href="https://jamespogran.com/css/styles.min.ddfee0ed32caada2ea07de177f306ed00ca6c2a4778c6a802af4855313a086fe.css" integrity="sha256-3f7g7TLKraLqB94XfzBu0AymwqR3jGqAKvSFUxOghv4=">
+
 </head>
-<body class="bg-light"><nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand text-success" href="https://jamespogran.com/">
+<body class="antialiased font-serif bg-gray-200">
+<nav class="flex items-center justify-between flex-wrap p-10">
+  <div class="flex items-center flex-shrink-0 mr-6">
+    <a href="https://jamespogran.com/" class="no-underline">
+      <h1 class="font-semibold text-2xl tracking-tight">James Pogran</h1>
+    </a>
+  </div>
+  <div class="block lg:hidden xl:hidden">
+    <button id="dnav-toggle" class="block lg:hidden cursor-pointer ml-auto relative w-12 h-12 p-4">
+      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+    </button>
+  </div>
+  <div class="block lg:hidden">
+    <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
+      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+    </button>
+  </div>
+  <div id="nav-content" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="lg:flex-grow">
     
-    James Pogran <i class="fas fa-code" title=""></i>
+      <a class="no-underline text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 " href="/post" title="">Blog</a>
     
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      
-      
-      <li class="nav-item">
-        <a class="nav-link" href="/post" title="">Blog</a>
-      </li>
-      
-      <li class="nav-item">
-        <a class="nav-link" href="/talk" title="">Talks</a>
-      </li>
-      
-    </ul><ul class="nav">
-  
-  <li class="nav-item">
-    <a href="//twitter.com/ender2025" class="nav-link text-success" target="_blank">
+      <a class="no-underline text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 " href="/book" title="">Books</a>
+    
+      <a class="no-underline text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 " href="/talk" title="">Talks</a>
+    
+    </div>
+  </div>
+  <div>
+    <h1 class="tracking-tight text-gray-600 pr-10 sm:hidden md:hidden">Intersection of Prose and Technology</h1>
+  </div>
+  <div id="social-content">
+    
+    <a href="//twitter.com/ender2025" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
       <i class="fab fa-lg fa-twitter" title="twitter"></i>
     </a>
-  </li>
-  
-  
-  <li class="nav-item">
-    <a href="//github.com/jpogran" class="nav-link text-success" target="_blank">
+    
+    
+    <a href="//github.com/jpogran" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
       <i class="fab fa-lg fa-github" title="github"></i>
     </a>
-  </li>
-  
-  
-  <li class="nav-item">
-    <a href="//stackoverflow.com/users/1083/james-pogran" class="nav-link text-success" target="_blank">
+    
+    
+    <a href="//stackoverflow.com/users/1083/james-pogran" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
       <i class="fab fa-lg fa-stack-overflow" title="stackoverflow"></i>
     </a>
-  </li>
-  
-  
-  <li class="nav-item">
-    <a href="//linkedin.com/in/jamespogran" class="nav-link text-success" target="_blank">
+    
+    
+    <a href="//linkedin.com/in/jamespogran" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
       <i class="fab fa-lg fa-linkedin-in" title="linkedin"></i>
     </a>
-  </li>
-  
-  
-  <li class="nav-item">
-    <a href="true" class="nav-link text-success" target="_blank">
+    
+    
+    <a href="/tags/dsc/index.xml" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
       <i class="fas fa-lg fa-rss" title="rss"></i>
     </a>
-  </li>
-  
-</ul>
-</div>
+    
+  </div>
 </nav>
 
-<main class="container mt-2">
-  <div class="row">
-    <div class="col">
-      <h1 class="display-4 text-success">dsc</h1>
+<div class="pl-20">
+
+  
+
+  
+  
+  <div class="pb-4">
+    <h2 class="text-xl"><a href="/post/diagnosing-dsc-and-puppet/">Diagnosing DSC and Puppet Executions</a></h2>
+    <div class="pl-4">
       
-      <div class="card mb-3" style="max-width: 740px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="https://jamespogran.com/img/DAG_tagline_logo_background.png" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h4 class="card-title"><a href="https://jamespogran.com/post/2017-10-19-diagnosing-dsc-and-puppet/" class="text-success">Diagnosing DSC and Puppet Executions</a></h4>
-        <p class="card-text">How to figure out what&#39;s going on when Puppet uses DSC</p>
-        <p class="card-text">
-          <small class="text-muted">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <time datetime="2017-Oct-19"><i class="fas fa-calendar "></i>
-                  19 Oct 2017</time>
-              </li>
-              <li class="list-inline-item">
-                <ul class="list-inline">
-                  
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsdsc"><i
-                      class="fas fa-tag"></i>
-                    dsc</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagspuppet"><i
-                      class="fas fa-tag"></i>
-                    puppet</a>
-                  
-                  
-                </ul>
-              </li>
-            </ul>
-          </small>
-        </p>
-      </div>
+      While developing your Puppet manifests using the Puppet DSC module you might run into a problem with one of the DSC Resources.
+The problem shows itself every execution, when Puppet says that the state has drifted and needs to be corrected. When you look at the state of the target node it appears to be correct, something must be wrong with Puppet, right? Well, as with most things, the answer is more complicated than it appears.
+      
     </div>
   </div>
+  
+  <div class="pb-4">
+    <h2 class="text-xl"><a href="/talk/2017-10-11-puppetconf-2017-reporting-on-dsc-and-puppet-presentation/">Using Puppet and DSC to Report on Environment Change</a></h2>
+    <div class="pl-4">
+      
+      Using Puppet and DSC to Report on Environment Change
+      
+    </div>
+  </div>
+  
+  <div class="pb-4">
+    <h2 class="text-xl"><a href="/post/published-learning-powershell-dsc-second-edition/">Learning PowerShell DSC Second Edition is published!</a></h2>
+    <div class="pl-4">
+      
+      The second edition of Learning PowerShell DSC is finally published! You can order it at these fine book sellers:
+ Packt Publishing Amazon Barnes and Noble  
+      
+    </div>
+  </div>
+  
+  <div class="pb-4">
+    <h2 class="text-xl"><a href="/post/puppetconf-2017/">PuppetConf 2017 Agenda</a></h2>
+    <div class="pl-4">
+      
+      Agenda and Speakers announced
+      
+    </div>
+  </div>
+  
+  <div class="pb-4">
+    <h2 class="text-xl"><a href="/post/second-edition-of-learning-powershell-dsc/">Starting work on the Second Edition of Learning PowerShell DSC!</a></h2>
+    <div class="pl-4">
+      
+      Starting work on the Second Edition of Learning PowerShell DSC!
+      
+    </div>
+  </div>
+  
+  <div class="pb-4">
+    <h2 class="text-xl"><a href="/post/deep-dive-puppet-dsc/">DSC deep dive: Installing and configuring IIS using Puppet and PowerShell DSC</a></h2>
+    <div class="pl-4">
+      
+      DSC deep dive: Installing and configuring IIS using Puppet and PowerShell DSC
+      
+    </div>
+  </div>
+  
+  <div class="pb-4">
+    <h2 class="text-xl"><a href="/talk/2016-03-24-managing-dsc-with-puppet/">Managing PowerShell DSC with Puppet</a></h2>
+    <div class="pl-4">
+      
+      Managing PowerShell DSC with Puppet
+      
+    </div>
+  </div>
+  
+  <div class="pb-4">
+    <h2 class="text-xl"><a href="/talk/2016-02-10-windows-webinar-series/">New Puppet Windows Webinar Series</a></h2>
+    <div class="pl-4">
+      
+      New Puppet Windows Webinar Series
+      
+    </div>
+  </div>
+  
+  <div class="pb-4">
+    <h2 class="text-xl"><a href="/post/puppet-book-blog-post/">Author Interview by Puppet</a></h2>
+    <div class="pl-4">
+      
+      Author Interview by Puppet
+      
+    </div>
+  </div>
+  
+  <div class="pb-4">
+    <h2 class="text-xl"><a href="/post/puppet-dsc-module-released/">Puppet DSC module is now supported!</a></h2>
+    <div class="pl-4">
+      
+      Puppet DSC module is now supported!
+      
+    </div>
+  </div>
+  
+
+  
+  <nav class="pt-4">
+    <ul class="pagination justify-content-center">
+      
+      
+      <li class="page-item"><a class="page-link" href="/tags/dsc/page/2/">&raquo;</a></li>
+      
+    </ul>
+  </nav>
+  
+
 </div>
-
-      
-      <a href="https://jamespogran.com/talk/2017-10-11-puppetconf-2017-reporting-on-dsc-and-puppet-presentation/" class="list-group-item list-group-item-action mb-3">
-  <div class="d-flex w-100 justify-content-between">
-    <h6 class="mb-1 text-success">Using Puppet and DSC to Report on Environment Change</h6>
-    <small><time datetime="2017-Oct-11"><i class="fas fa-calendar "></i>
-        11 Oct 2017</time></small>
-  </div>
-  <p class="mb-1 text-muted">PuppetConf 2017</p>
-</a>
-
-      
-      <div class="card mb-3" style="max-width: 740px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="https://jamespogran.com/img/learning_powershell_dsc_second_edition.png" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h4 class="card-title"><a href="https://jamespogran.com/post/2017-09-11-published-learning-powershell-dsc-second-edition/" class="text-success">Learning PowerShell DSC Second Edition is published!</a></h4>
-        <p class="card-text">My DSC book is done!</p>
-        <p class="card-text">
-          <small class="text-muted">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <time datetime="2017-Sep-11"><i class="fas fa-calendar "></i>
-                  11 Sep 2017</time>
-              </li>
-              <li class="list-inline-item">
-                <ul class="list-inline">
-                  
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsdsc"><i
-                      class="fas fa-tag"></i>
-                    dsc</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsbook"><i
-                      class="fas fa-tag"></i>
-                    book</a>
-                  
-                  
-                </ul>
-              </li>
-            </ul>
-          </small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-      
-      <div class="card mb-3" style="max-width: 740px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="https://jamespogran.com/img/puppetconf-logo.png" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h4 class="card-title"><a href="https://jamespogran.com/post/2017-06-07-puppetconf-2017/" class="text-success">PuppetConf 2017 Agenda</a></h4>
-        <p class="card-text">Agenda and Speakers announced</p>
-        <p class="card-text">
-          <small class="text-muted">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <time datetime="2017-Jun-07"><i class="fas fa-calendar "></i>
-                  7 Jun 2017</time>
-              </li>
-              <li class="list-inline-item">
-                <ul class="list-inline">
-                  
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagspuppetconf"><i
-                      class="fas fa-tag"></i>
-                    puppetconf</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsdsc"><i
-                      class="fas fa-tag"></i>
-                    dsc</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagspuppet"><i
-                      class="fas fa-tag"></i>
-                    puppet</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsbook"><i
-                      class="fas fa-tag"></i>
-                    book</a>
-                  
-                  
-                </ul>
-              </li>
-            </ul>
-          </small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-      
-      <div class="card mb-3" style="max-width: 740px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="https://jamespogran.com/img/learning_powershell_dsc_second_edition.png" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h4 class="card-title"><a href="https://jamespogran.com/post/2017-04-04-second-edition-of-learning-powershell-dsc/" class="text-success">Starting work on the Second Edition of Learning PowerShell DSC!</a></h4>
-        <p class="card-text">Starting work on the Second Edition of Learning PowerShell DSC!</p>
-        <p class="card-text">
-          <small class="text-muted">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <time datetime="2017-Apr-04"><i class="fas fa-calendar "></i>
-                  4 Apr 2017</time>
-              </li>
-              <li class="list-inline-item">
-                <ul class="list-inline">
-                  
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsdsc"><i
-                      class="fas fa-tag"></i>
-                    dsc</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsbook"><i
-                      class="fas fa-tag"></i>
-                    book</a>
-                  
-                  
-                </ul>
-              </li>
-            </ul>
-          </small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-      
-      <div class="card mb-3" style="max-width: 740px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="https://jamespogran.com/img/logo_tagline_background.png" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h4 class="card-title"><a href="https://jamespogran.com/post/2016-03-16-deep-dive-puppet-dsc/" class="text-success">DSC deep dive: Installing and configuring IIS using Puppet and PowerShell DSC</a></h4>
-        <p class="card-text">DSC deep dive: Installing and configuring IIS using Puppet and PowerShell DSC</p>
-        <p class="card-text">
-          <small class="text-muted">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <time datetime="2017-Mar-16"><i class="fas fa-calendar "></i>
-                  16 Mar 2017</time>
-              </li>
-              <li class="list-inline-item">
-                <ul class="list-inline">
-                  
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsdsc"><i
-                      class="fas fa-tag"></i>
-                    dsc</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagspuppet"><i
-                      class="fas fa-tag"></i>
-                    puppet</a>
-                  
-                  
-                </ul>
-              </li>
-            </ul>
-          </small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-      
-      <a href="https://jamespogran.com/talk/2016-03-24-managing-dsc-with-puppet/" class="list-group-item list-group-item-action mb-3">
-  <div class="d-flex w-100 justify-content-between">
-    <h6 class="mb-1 text-success">Managing PowerShell DSC with Puppet</h6>
-    <small><time datetime="2016-Mar-24"><i class="fas fa-calendar "></i>
-        24 Mar 2016</time></small>
-  </div>
-  <p class="mb-1 text-muted"></p>
-</a>
-
-      
-      <a href="https://jamespogran.com/talk/2016-02-10-windows-webinar-series/" class="list-group-item list-group-item-action mb-3">
-  <div class="d-flex w-100 justify-content-between">
-    <h6 class="mb-1 text-success">New Puppet Windows Webinar Series</h6>
-    <small><time datetime="2016-Feb-10"><i class="fas fa-calendar "></i>
-        10 Feb 2016</time></small>
-  </div>
-  <p class="mb-1 text-muted"></p>
-</a>
-
-      
-      <div class="card mb-3" style="max-width: 740px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="https://jamespogran.com/img/learning_powershell_dsc_first_edition.jpg" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h4 class="card-title"><a href="https://jamespogran.com/post/2016-01-27-puppet-book-blog-post/" class="text-success">Author Interview by Puppet</a></h4>
-        <p class="card-text">Author Interview by Puppet</p>
-        <p class="card-text">
-          <small class="text-muted">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <time datetime="2016-Jan-27"><i class="fas fa-calendar "></i>
-                  27 Jan 2016</time>
-              </li>
-              <li class="list-inline-item">
-                <ul class="list-inline">
-                  
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsdsc"><i
-                      class="fas fa-tag"></i>
-                    dsc</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagspuppet"><i
-                      class="fas fa-tag"></i>
-                    puppet</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsbook"><i
-                      class="fas fa-tag"></i>
-                    book</a>
-                  
-                  
-                </ul>
-              </li>
-            </ul>
-          </small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-      
-      <div class="card mb-3" style="max-width: 740px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="https://jamespogran.com/img/Puppet-Logo-Amber-White-lg.jpg" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h4 class="card-title"><a href="https://jamespogran.com/post/2016-01-20-puppet-dsc-module-released/" class="text-success">Puppet DSC module is now supported!</a></h4>
-        <p class="card-text">Puppet DSC module is now supported!</p>
-        <p class="card-text">
-          <small class="text-muted">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <time datetime="2016-Jan-20"><i class="fas fa-calendar "></i>
-                  20 Jan 2016</time>
-              </li>
-              <li class="list-inline-item">
-                <ul class="list-inline">
-                  
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsdsc"><i
-                      class="fas fa-tag"></i>
-                    dsc</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagspuppet"><i
-                      class="fas fa-tag"></i>
-                    puppet</a>
-                  
-                  
-                </ul>
-              </li>
-            </ul>
-          </small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-      
-      <div class="card mb-3" style="max-width: 740px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="https://jamespogran.com/img/learning_powershell_dsc_first_edition.jpg" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h4 class="card-title"><a href="https://jamespogran.com/post/2015-10-26-dsc-book-published/" class="text-success">Learning DSC Book Published!</a></h4>
-        <p class="card-text">My new book on PowerShell DSC is published!</p>
-        <p class="card-text">
-          <small class="text-muted">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <time datetime="2015-Oct-26"><i class="fas fa-calendar "></i>
-                  26 Oct 2015</time>
-              </li>
-              <li class="list-inline-item">
-                <ul class="list-inline">
-                  
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsdsc"><i
-                      class="fas fa-tag"></i>
-                    dsc</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagspuppet"><i
-                      class="fas fa-tag"></i>
-                    puppet</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsbook"><i
-                      class="fas fa-tag"></i>
-                    book</a>
-                  
-                  
-                </ul>
-              </li>
-            </ul>
-          </small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-      
-      <a href="https://jamespogran.com/talk/2015-10-09-powershell-and-dsc-talk/" class="list-group-item list-group-item-action mb-3">
-  <div class="d-flex w-100 justify-content-between">
-    <h6 class="mb-1 text-success">PuppetConf 2015 PowerShell and DSC Session</h6>
-    <small><time datetime="2015-Oct-09"><i class="fas fa-calendar "></i>
-        9 Oct 2015</time></small>
-  </div>
-  <p class="mb-1 text-muted"></p>
-</a>
-
-      
-      <div class="card mb-3" style="max-width: 740px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="https://jamespogran.com/img/puppet_conf_2015_entry.jpg" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h4 class="card-title"><a href="https://jamespogran.com/post/2015-10-03-puppetconf-2015/" class="text-success">I&#39;m going to PuppetConf!</a></h4>
-        <p class="card-text">I&#39;m going to PuppetConf!</p>
-        <p class="card-text">
-          <small class="text-muted">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <time datetime="2015-Oct-03"><i class="fas fa-calendar "></i>
-                  3 Oct 2015</time>
-              </li>
-              <li class="list-inline-item">
-                <ul class="list-inline">
-                  
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagspuppetconf"><i
-                      class="fas fa-tag"></i>
-                    puppetconf</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsdsc"><i
-                      class="fas fa-tag"></i>
-                    dsc</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagspuppet"><i
-                      class="fas fa-tag"></i>
-                    puppet</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsbook"><i
-                      class="fas fa-tag"></i>
-                    book</a>
-                  
-                  
-                </ul>
-              </li>
-            </ul>
-          </small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-      
-      <div class="card mb-3" style="max-width: 740px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="https://jamespogran.com/img/learning_powershell_dsc_first_edition.jpg" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h4 class="card-title"><a href="https://jamespogran.com/post/2015-08-19-dsc-book-finished/" class="text-success">PowerShell DSC Book Finished!</a></h4>
-        <p class="card-text">PowerShell DSC Book Finished!</p>
-        <p class="card-text">
-          <small class="text-muted">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <time datetime="2015-Aug-19"><i class="fas fa-calendar "></i>
-                  19 Aug 2015</time>
-              </li>
-              <li class="list-inline-item">
-                <ul class="list-inline">
-                  
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsdsc"><i
-                      class="fas fa-tag"></i>
-                    dsc</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagspuppet"><i
-                      class="fas fa-tag"></i>
-                    puppet</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsbook"><i
-                      class="fas fa-tag"></i>
-                    book</a>
-                  
-                  
-                </ul>
-              </li>
-            </ul>
-          </small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-      
-      <div class="card mb-3" style="max-width: 740px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="https://jamespogran.com/img/learning_powershell_dsc_first_edition.jpg" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h4 class="card-title"><a href="https://jamespogran.com/post/2015-04-24-dsc-book/" class="text-success">PowerShell DSC Book</a></h4>
-        <p class="card-text">PowerShell DSC Book</p>
-        <p class="card-text">
-          <small class="text-muted">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <time datetime="2015-Apr-24"><i class="fas fa-calendar "></i>
-                  24 Apr 2015</time>
-              </li>
-              <li class="list-inline-item">
-                <ul class="list-inline">
-                  
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsdsc"><i
-                      class="fas fa-tag"></i>
-                    dsc</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagspuppet"><i
-                      class="fas fa-tag"></i>
-                    puppet</a>
-                  
-                  <a class="list-inline-item text-dark" href="https://jamespogran.com/tagsbook"><i
-                      class="fas fa-tag"></i>
-                    book</a>
-                  
-                  
-                </ul>
-              </li>
-            </ul>
-          </small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-      
-    </div>
-  </div>
-</main>
-<footer class="">
-
-</footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+<footer class="pt-10 pb-10">
+  <h1 class="text-center font-semibold">©2020 <a href="https://github.com/jpogran">James Pogran</a>.</h1>
+  <h1 class="text-center font-semibold pt-4 ">Powered by <a href="https://gohugo.com">Hugo</a> using the <a href="https://github.com/jpogran/exlibris">exlibris</a> theme</h1>
+  <script>
+    document.getElementById('nav-toggle').onclick = function(){
+      document.getElementById("nav-content").classList.toggle("hidden");
+      document.getElementById("social-content").classList.toggle("hidden");
+    }
+  </script>
+  
+  
+  
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-74930020-1', 'auto');
 	
 	ga('send', 'pageview');
 }
 </script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
+  
+  
+</footer>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>James Pogran</title>
@@ -6,10 +6,29 @@
     <description>Recent content on James Pogran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 May 2019 10:30:45 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2020 14:13:06 -0400</lastBuildDate>
     
 	<atom:link href="https://jamespogran.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What’s new with the Puppet VS Code extension</title>
+      <link>https://jamespogran.com/media/new-puppet-vscode-extension/</link>
+      <pubDate>Wed, 08 Apr 2020 14:13:06 -0400</pubDate>
+      
+      <guid>https://jamespogran.com/media/new-puppet-vscode-extension/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Powershell Conference Book 2</title>
+      <link>https://jamespogran.com/book/powershell-conf-book-2/</link>
+      <pubDate>Fri, 31 Jan 2020 16:03:16 -0400</pubDate>
+      
+      <guid>https://jamespogran.com/book/powershell-conf-book-2/</guid>
+      <description>Forty subject matter experts have teamed up to bring you the ultimate collection of PowerShell topics that are designed to be like a conference in a book. This book not only delivers top-notch content that rivals any book on the market, but all royalties are donated to the OnRamp scholarship program which bootstraps others into the industry.
+About the Book This book is designed to be like a conference in a book where each chapter is written by a different author who is a subject matter expert on the topic covered in their chapter.</description>
+    </item>
     
     <item>
       <title>Using Powershell in a Cross Platform World</title>
@@ -67,20 +86,31 @@
     
     <item>
       <title>Verify Spectre / Meltdown protections remotely with Puppet Bolt on Windows</title>
-      <link>https://jamespogran.com/puppet.com/blog/verify-spectre-meltdown-protections-remotely-puppet-bolt-windows</link>
+      <link>https://jamespogran.com/media/verify-spectre-meltdown-protections-remotely-puppet-bolt-windows/</link>
       <pubDate>Tue, 23 Jan 2018 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/puppet.com/blog/verify-spectre-meltdown-protections-remotely-puppet-bolt-windows</guid>
+      <guid>https://jamespogran.com/media/verify-spectre-meltdown-protections-remotely-puppet-bolt-windows/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Learning Powershell DSC Second Edition</title>
+      <link>https://jamespogran.com/book/learning-powershell-dsc-second-edition/</link>
+      <pubDate>Thu, 19 Oct 2017 16:00:55 -0400</pubDate>
+      
+      <guid>https://jamespogran.com/book/learning-powershell-dsc-second-edition/</guid>
+      <description>About The main goal of this book is to teach you to configure, deploy, and manage your system using the new features of PowerShell v5/v6 DSC.
+This book begins with the basics of PowerShell Desired State Configuration, covering its architecture and components. It familiarizes you with the set of Windows PowerShell language extensions and new Windows PowerShell commands that make up DSC. Then it helps you create DSC custom resources and work with DSC configurations with the help of practical examples.</description>
+    </item>
+    
+    <item>
       <title>Diagnosing DSC and Puppet Executions</title>
-      <link>https://jamespogran.com/post/2017-10-19-diagnosing-dsc-and-puppet/</link>
+      <link>https://jamespogran.com/post/diagnosing-dsc-and-puppet/</link>
       <pubDate>Thu, 19 Oct 2017 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2017-10-19-diagnosing-dsc-and-puppet/</guid>
-      <description>How to figure out what&amp;rsquo;s going on when Puppet uses DSC</description>
+      <guid>https://jamespogran.com/post/diagnosing-dsc-and-puppet/</guid>
+      <description>While developing your Puppet manifests using the Puppet DSC module you might run into a problem with one of the DSC Resources.
+The problem shows itself every execution, when Puppet says that the state has drifted and needs to be corrected. When you look at the state of the target node it appears to be correct, something must be wrong with Puppet, right? Well, as with most things, the answer is more complicated than it appears.</description>
     </item>
     
     <item>
@@ -103,74 +133,74 @@
     
     <item>
       <title>Announcing Puppet for Visual Studio Code!</title>
-      <link>https://jamespogran.com/puppet.com/blog/announcing-puppet-visual-studio-code</link>
+      <link>https://jamespogran.com/media/announcing-puppet-visual-studio-code/</link>
       <pubDate>Mon, 02 Oct 2017 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/puppet.com/blog/announcing-puppet-visual-studio-code</guid>
+      <guid>https://jamespogran.com/media/announcing-puppet-visual-studio-code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Learning PowerShell DSC Second Edition is published!</title>
-      <link>https://jamespogran.com/post/2017-09-11-published-learning-powershell-dsc-second-edition/</link>
+      <link>https://jamespogran.com/post/published-learning-powershell-dsc-second-edition/</link>
       <pubDate>Mon, 11 Sep 2017 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2017-09-11-published-learning-powershell-dsc-second-edition/</guid>
+      <guid>https://jamespogran.com/post/published-learning-powershell-dsc-second-edition/</guid>
       <description>The second edition of Learning PowerShell DSC is finally published! You can order it at these fine book sellers:
  Packt Publishing Amazon Barnes and Noble  </description>
     </item>
     
     <item>
       <title>Puppet IIS module: now Puppet Supported</title>
-      <link>https://jamespogran.com/puppet.com/blog/puppet-iis-module-now-puppet-supported</link>
+      <link>https://jamespogran.com/media/puppet-iis-module-now-puppet-supported/</link>
       <pubDate>Sat, 17 Jun 2017 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/puppet.com/blog/puppet-iis-module-now-puppet-supported</guid>
+      <guid>https://jamespogran.com/media/puppet-iis-module-now-puppet-supported/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PuppetConf 2017 Agenda</title>
-      <link>https://jamespogran.com/post/2017-06-07-puppetconf-2017/</link>
+      <link>https://jamespogran.com/post/puppetconf-2017/</link>
       <pubDate>Wed, 07 Jun 2017 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2017-06-07-puppetconf-2017/</guid>
+      <guid>https://jamespogran.com/post/puppetconf-2017/</guid>
       <description>Agenda and Speakers announced</description>
     </item>
     
     <item>
       <title>Starting work on the Second Edition of Learning PowerShell DSC!</title>
-      <link>https://jamespogran.com/post/2017-04-04-second-edition-of-learning-powershell-dsc/</link>
+      <link>https://jamespogran.com/post/second-edition-of-learning-powershell-dsc/</link>
       <pubDate>Tue, 04 Apr 2017 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2017-04-04-second-edition-of-learning-powershell-dsc/</guid>
+      <guid>https://jamespogran.com/post/second-edition-of-learning-powershell-dsc/</guid>
       <description>Starting work on the Second Edition of Learning PowerShell DSC!</description>
     </item>
     
     <item>
       <title>DSC deep dive: Installing and configuring IIS using Puppet and PowerShell DSC</title>
-      <link>https://jamespogran.com/post/2016-03-16-deep-dive-puppet-dsc/</link>
+      <link>https://jamespogran.com/post/deep-dive-puppet-dsc/</link>
       <pubDate>Thu, 16 Mar 2017 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2016-03-16-deep-dive-puppet-dsc/</guid>
+      <guid>https://jamespogran.com/post/deep-dive-puppet-dsc/</guid>
       <description>DSC deep dive: Installing and configuring IIS using Puppet and PowerShell DSC</description>
     </item>
     
     <item>
       <title>Managing PowerShell DSC with Puppet</title>
-      <link>https://jamespogran.com/puppet.com/blog/managing-powershell-dsc-puppet</link>
+      <link>https://jamespogran.com/media/managing-powershell-dsc-puppet/</link>
       <pubDate>Mon, 03 Oct 2016 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/puppet.com/blog/managing-powershell-dsc-puppet</guid>
+      <guid>https://jamespogran.com/media/managing-powershell-dsc-puppet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DSC deep dive: Installing and configuring IIS using Puppet and PowerShell DSC</title>
-      <link>https://jamespogran.com/puppet.com/blog/dsc-deep-dive-installing-and-configuring-iis-using-puppet-and-powershell-dsc</link>
+      <link>https://jamespogran.com/media/dsc-deep-dive-installing-and-configuring-iis-using-puppet-and-powershell-dsc/</link>
       <pubDate>Sat, 16 Apr 2016 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/puppet.com/blog/dsc-deep-dive-installing-and-configuring-iis-using-puppet-and-powershell-dsc</guid>
+      <guid>https://jamespogran.com/media/dsc-deep-dive-installing-and-configuring-iis-using-puppet-and-powershell-dsc/</guid>
       <description></description>
     </item>
     
@@ -194,38 +224,48 @@
     
     <item>
       <title>Author Interview by Puppet</title>
-      <link>https://jamespogran.com/post/2016-01-27-puppet-book-blog-post/</link>
+      <link>https://jamespogran.com/post/puppet-book-blog-post/</link>
       <pubDate>Wed, 27 Jan 2016 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2016-01-27-puppet-book-blog-post/</guid>
+      <guid>https://jamespogran.com/post/puppet-book-blog-post/</guid>
       <description>Author Interview by Puppet</description>
     </item>
     
     <item>
       <title>PowerShell DSC module is now supported</title>
-      <link>https://jamespogran.com/puppet.com/blog/powershell-dsc-module-now-supported</link>
+      <link>https://jamespogran.com/media/powershell-dsc-module-now-supported/</link>
       <pubDate>Wed, 20 Jan 2016 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/puppet.com/blog/powershell-dsc-module-now-supported</guid>
+      <guid>https://jamespogran.com/media/powershell-dsc-module-now-supported/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Puppet DSC module is now supported!</title>
-      <link>https://jamespogran.com/post/2016-01-20-puppet-dsc-module-released/</link>
+      <link>https://jamespogran.com/post/puppet-dsc-module-released/</link>
       <pubDate>Wed, 20 Jan 2016 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2016-01-20-puppet-dsc-module-released/</guid>
+      <guid>https://jamespogran.com/post/puppet-dsc-module-released/</guid>
       <description>Puppet DSC module is now supported!</description>
     </item>
     
     <item>
       <title>Learning DSC Book Published!</title>
-      <link>https://jamespogran.com/post/2015-10-26-dsc-book-published/</link>
+      <link>https://jamespogran.com/post/dsc-book-published/</link>
       <pubDate>Mon, 26 Oct 2015 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2015-10-26-dsc-book-published/</guid>
+      <guid>https://jamespogran.com/post/dsc-book-published/</guid>
       <description>My new book on PowerShell DSC is published!</description>
+    </item>
+    
+    <item>
+      <title>Learning Powershell DSC</title>
+      <link>https://jamespogran.com/book/learning-powershell-dsc/</link>
+      <pubDate>Mon, 19 Oct 2015 16:01:03 -0400</pubDate>
+      
+      <guid>https://jamespogran.com/book/learning-powershell-dsc/</guid>
+      <description>About Windows PowerShell is a task-based command-line shell and scripting language designed especially for system administration. PowerShell DSC is a new management platform that enables you to deploy and manage configuration data for software services and manage the environment in which these services run.
+This book begins with an overview of the basics of PowerShell DSC by covering the architecture and components of the Desired Sate Configuration. It will then familiarize you with the set of PowerShell language extensions and new PowerShell commands.</description>
     </item>
     
     <item>
@@ -239,55 +279,55 @@
     
     <item>
       <title>I&#39;m going to PuppetConf!</title>
-      <link>https://jamespogran.com/post/2015-10-03-puppetconf-2015/</link>
+      <link>https://jamespogran.com/post/puppetconf-2015/</link>
       <pubDate>Sat, 03 Oct 2015 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2015-10-03-puppetconf-2015/</guid>
+      <guid>https://jamespogran.com/post/puppetconf-2015/</guid>
       <description>I&amp;rsquo;m going to PuppetConf!</description>
     </item>
     
     <item>
       <title>PowerShell DSC Book Finished!</title>
-      <link>https://jamespogran.com/post/2015-08-19-dsc-book-finished/</link>
+      <link>https://jamespogran.com/post/dsc-book-finished/</link>
       <pubDate>Wed, 19 Aug 2015 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2015-08-19-dsc-book-finished/</guid>
+      <guid>https://jamespogran.com/post/dsc-book-finished/</guid>
       <description>PowerShell DSC Book Finished!</description>
     </item>
     
     <item>
       <title>Puppet Day One</title>
-      <link>https://jamespogran.com/post/2015-06-08-puppet-day-one/</link>
+      <link>https://jamespogran.com/post/puppet-day-one/</link>
       <pubDate>Mon, 08 Jun 2015 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2015-06-08-puppet-day-one/</guid>
+      <guid>https://jamespogran.com/post/puppet-day-one/</guid>
       <description>Puppet Day One</description>
     </item>
     
     <item>
       <title>PowerShell DSC Book</title>
-      <link>https://jamespogran.com/post/2015-04-24-dsc-book/</link>
+      <link>https://jamespogran.com/post/dsc-book/</link>
       <pubDate>Fri, 24 Apr 2015 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2015-04-24-dsc-book/</guid>
+      <guid>https://jamespogran.com/post/dsc-book/</guid>
       <description>PowerShell DSC Book</description>
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>https://jamespogran.com/post/2015-03-05-hello-world/</link>
+      <link>https://jamespogran.com/post/hello-world/</link>
       <pubDate>Thu, 05 Mar 2015 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2015-03-05-hello-world/</guid>
+      <guid>https://jamespogran.com/post/hello-world/</guid>
       <description>Hello World</description>
     </item>
     
     <item>
       <title>Setting Up Things</title>
-      <link>https://jamespogran.com/post/2015-03-05-setting-up-things/</link>
+      <link>https://jamespogran.com/post/setting-up-things/</link>
       <pubDate>Thu, 05 Mar 2015 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2015-03-05-setting-up-things/</guid>
+      <guid>https://jamespogran.com/post/setting-up-things/</guid>
       <description>Setting Up Things</description>
     </item>
     

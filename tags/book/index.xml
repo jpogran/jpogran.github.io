@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>book on James Pogran</title>
@@ -13,29 +13,29 @@
     
     <item>
       <title>Learning PowerShell DSC Second Edition is published!</title>
-      <link>https://jamespogran.com/post/2017-09-11-published-learning-powershell-dsc-second-edition/</link>
+      <link>https://jamespogran.com/post/published-learning-powershell-dsc-second-edition/</link>
       <pubDate>Mon, 11 Sep 2017 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2017-09-11-published-learning-powershell-dsc-second-edition/</guid>
+      <guid>https://jamespogran.com/post/published-learning-powershell-dsc-second-edition/</guid>
       <description>The second edition of Learning PowerShell DSC is finally published! You can order it at these fine book sellers:
  Packt Publishing Amazon Barnes and Noble  </description>
     </item>
     
     <item>
       <title>PuppetConf 2017 Agenda</title>
-      <link>https://jamespogran.com/post/2017-06-07-puppetconf-2017/</link>
+      <link>https://jamespogran.com/post/puppetconf-2017/</link>
       <pubDate>Wed, 07 Jun 2017 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2017-06-07-puppetconf-2017/</guid>
+      <guid>https://jamespogran.com/post/puppetconf-2017/</guid>
       <description>Agenda and Speakers announced</description>
     </item>
     
     <item>
       <title>Starting work on the Second Edition of Learning PowerShell DSC!</title>
-      <link>https://jamespogran.com/post/2017-04-04-second-edition-of-learning-powershell-dsc/</link>
+      <link>https://jamespogran.com/post/second-edition-of-learning-powershell-dsc/</link>
       <pubDate>Tue, 04 Apr 2017 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2017-04-04-second-edition-of-learning-powershell-dsc/</guid>
+      <guid>https://jamespogran.com/post/second-edition-of-learning-powershell-dsc/</guid>
       <description>Starting work on the Second Edition of Learning PowerShell DSC!</description>
     </item>
     
@@ -50,46 +50,46 @@
     
     <item>
       <title>Author Interview by Puppet</title>
-      <link>https://jamespogran.com/post/2016-01-27-puppet-book-blog-post/</link>
+      <link>https://jamespogran.com/post/puppet-book-blog-post/</link>
       <pubDate>Wed, 27 Jan 2016 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2016-01-27-puppet-book-blog-post/</guid>
+      <guid>https://jamespogran.com/post/puppet-book-blog-post/</guid>
       <description>Author Interview by Puppet</description>
     </item>
     
     <item>
       <title>Learning DSC Book Published!</title>
-      <link>https://jamespogran.com/post/2015-10-26-dsc-book-published/</link>
+      <link>https://jamespogran.com/post/dsc-book-published/</link>
       <pubDate>Mon, 26 Oct 2015 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2015-10-26-dsc-book-published/</guid>
+      <guid>https://jamespogran.com/post/dsc-book-published/</guid>
       <description>My new book on PowerShell DSC is published!</description>
     </item>
     
     <item>
       <title>I&#39;m going to PuppetConf!</title>
-      <link>https://jamespogran.com/post/2015-10-03-puppetconf-2015/</link>
+      <link>https://jamespogran.com/post/puppetconf-2015/</link>
       <pubDate>Sat, 03 Oct 2015 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2015-10-03-puppetconf-2015/</guid>
+      <guid>https://jamespogran.com/post/puppetconf-2015/</guid>
       <description>I&amp;rsquo;m going to PuppetConf!</description>
     </item>
     
     <item>
       <title>PowerShell DSC Book Finished!</title>
-      <link>https://jamespogran.com/post/2015-08-19-dsc-book-finished/</link>
+      <link>https://jamespogran.com/post/dsc-book-finished/</link>
       <pubDate>Wed, 19 Aug 2015 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2015-08-19-dsc-book-finished/</guid>
+      <guid>https://jamespogran.com/post/dsc-book-finished/</guid>
       <description>PowerShell DSC Book Finished!</description>
     </item>
     
     <item>
       <title>PowerShell DSC Book</title>
-      <link>https://jamespogran.com/post/2015-04-24-dsc-book/</link>
+      <link>https://jamespogran.com/post/dsc-book/</link>
       <pubDate>Fri, 24 Apr 2015 14:13:06 -0400</pubDate>
       
-      <guid>https://jamespogran.com/post/2015-04-24-dsc-book/</guid>
+      <guid>https://jamespogran.com/post/dsc-book/</guid>
       <description>PowerShell DSC Book</description>
     </item>
     

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.66.0" />
+<meta name="description" content="How to figure out what&#39;s going on when Puppet uses DSC">
+<meta name="author" content="James Pogran">
+<meta property="article:published_time" content="2017-10-19T14:13:06-04:00">
+<meta property="article:modified_time" content="2017-10-19T14:13:06-04:00">
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://jamespogran.com/img/learning_powershell_dsc_second_edition.png"/>
+
+<meta name="twitter:title" content="Diagnosing DSC and Puppet Executions"/>
+<meta name="twitter:description" content="How to figure out what&#39;s going on when Puppet uses DSC"/>
+
+<meta property="og:title" content="Diagnosing DSC and Puppet Executions" />
+<meta property="og:description" content="How to figure out what&#39;s going on when Puppet uses DSC" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jamespogran.com/post/diagnosing-dsc-and-puppet/" />
+<meta property="og:image" content="https://jamespogran.com/img/learning_powershell_dsc_second_edition.png"/>
+<meta property="article:published_time" content="2017-10-19T14:13:06-04:00" />
+<meta property="article:modified_time" content="2017-10-19T14:13:06-04:00" />
+
+
+<title>Diagnosing DSC and Puppet Executions | James Pogran</title>
+<link rel="icon" type="image/png" href="/img/icon.png">
+<link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+<link rel="canonical" href="https://jamespogran.com/post/diagnosing-dsc-and-puppet/">
+
+<script src="https://kit.fontawesome.com/e1f83257d9.js" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://jamespogran.com/css/styles.min.ddfee0ed32caada2ea07de177f306ed00ca6c2a4778c6a802af4855313a086fe.css" integrity="sha256-3f7g7TLKraLqB94XfzBu0AymwqR3jGqAKvSFUxOghv4=">
+
+</head>
+<body class="antialiased font-serif bg-gray-200">
+<nav class="flex items-center justify-between flex-wrap p-10">
+  <div class="flex items-center flex-shrink-0 mr-6">
+    <a href="https://jamespogran.com/" class="no-underline">
+      <h1 class="font-semibold text-2xl tracking-tight">James Pogran</h1>
+    </a>
+  </div>
+  <div class="block lg:hidden xl:hidden">
+    <button id="dnav-toggle" class="block lg:hidden cursor-pointer ml-auto relative w-12 h-12 p-4">
+      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+    </button>
+  </div>
+  <div class="block lg:hidden">
+    <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
+      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+    </button>
+  </div>
+  <div id="nav-content" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="lg:flex-grow">
+    
+      <a class="no-underline text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 " href="/post" title="">Blog</a>
+    
+      <a class="no-underline text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 " href="/book" title="">Books</a>
+    
+      <a class="no-underline text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 " href="/talk" title="">Talks</a>
+    
+    </div>
+  </div>
+  <div>
+    <h1 class="tracking-tight text-gray-600 pr-10 sm:hidden md:hidden">Intersection of Prose and Technology</h1>
+  </div>
+  <div id="social-content">
+    
+    <a href="//twitter.com/ender2025" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
+      <i class="fab fa-lg fa-twitter" title="twitter"></i>
+    </a>
+    
+    
+    <a href="//github.com/jpogran" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
+      <i class="fab fa-lg fa-github" title="github"></i>
+    </a>
+    
+    
+    <a href="//stackoverflow.com/users/1083/james-pogran" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
+      <i class="fab fa-lg fa-stack-overflow" title="stackoverflow"></i>
+    </a>
+    
+    
+    <a href="//linkedin.com/in/jamespogran" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
+      <i class="fab fa-lg fa-linkedin-in" title="linkedin"></i>
+    </a>
+    
+    
+  </div>
+</nav>
+
+<div class="container mx-auto px-4">
+  <div class="">
+    <article class="">
+      <div class="flex sm:flex-wrap md:flex-wrap lg:flex-no-wrap xl:flex-no-wrap ">
+        <div class="lg:w-2/3 mr-4">
+          <h1 class="font-bold text-6xl tracking-tight">Diagnosing DSC and Puppet Executions</h1>
+          <h1 class="font-semibold text-gray-700 text-xl pb-2">How to figure out what&#39;s going on when Puppet uses DSC to ensure desired state</h1>
+          <h1 class="font-semibold text-gray-600 text-sm sm:pb-4 md:pb-4">October 19, 2017</h1>
+        </div>
+        <div class="lg:w-1/3">
+          <img class="rounded-lg shadow-lg" src="https://jamespogran.com/img/DAG_tagline_logo_background.png" />
+        </div>
+      </div>
+      <div class="pt-10">
+        <p>While developing your Puppet manifests using the Puppet DSC module you might run into a problem with one of the DSC Resources.</p>
+<p>The problem shows itself every execution, when Puppet says that the state has drifted and needs to be corrected. When you look at the state of the target node it appears to be correct, something must be wrong with Puppet, right? Well, as with most things, the answer is more complicated than it appears.</p>
+<p>The <a href="https://forge.puppet.com/puppetlabs/dsc">Puppet dsc module</a> works by invoking DSC directly using the <code>Invoke-DscResource</code> cmdlet using <code>TEST</code>, passing on the properties and values you entered into the Puppet manifest. DSC then interrogates the target node for compliance, and reports whether it is in the desired state or not. If it&rsquo;s not in the desired state, then Puppet invokes <code>Invoke-DscResource</code> with a <code>SET</code> and DSC corrects the drift. It&rsquo;s up to DSC to both determine state and correctly set the state.</p>
+<p>In our case above, it&rsquo;s DSC that is constantly reporting the target node is not in the desired state, fixing it, then reporting it&rsquo;s drifted in the next run. Puppet is just passing along the message, so to speak.</p>
+<h2 id="where-to-start">Where to Start</h2>
+<p>So how do you figure out what is going wrong?</p>
+<p>The first step is to run puppet with your same manifest, but in debug mode:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">PS C:\Users\Administrator\Desktop&gt; puppet apply --debug wakka.pp</code></pre></td></tr></table>
+</div>
+</div>
+<p>This outputs all the normal Puppet debug information you&rsquo;re used to, along with the debug information from the DSC execution. This extra information is largely the PowerShell code the Puppet dsc module generated in order to use <code>Invoke-DscResource</code>, which can be skipped at this moment, but will be helpful later on. Right now we&rsquo;re interested in the last message from the &lsquo;first pass&rsquo;, the <code>TEST</code> method:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> Time taken <span style="color:#66d9ef">for</span> configuration job to complete is 2.478 seconds
+{<span style="color:#e6db74">&#34;rebootrequired&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>false,<span style="color:#e6db74">&#34;indesiredstate&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>false,<span style="color:#e6db74">&#34;errormessage&#34;</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#e6db74">&#34;&#34;</span>}</code></pre></td></tr></table>
+</div>
+</div>
+<p>This means DSC tested the state of the target node and found it non-compliant. But what was non-compliant?</p>
+<h2 id="showing-debug-information">Showing Debug Information</h2>
+<p>Unfortunately DSC does not surface more information without some extra work. We have to do some digging, and rely on the DSC Resource author to have implemented some Verbose logging.</p>
+<p>We go back to our output and copy the PowerShell code we saw earlier that invokes DSC:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">PS C:\Users\Administrator\Desktop&gt; $invokeParams = @{
+  Name          = <span style="color:#e6db74">&#39;xFirewall&#39;</span>
+  Method        = <span style="color:#e6db74">&#39;test&#39;</span>
+  Property      = @{
+    name = <span style="color:#e6db74">&#39;my_firewall&#39;</span>
+    enabled = <span style="color:#e6db74">&#39;True&#39;</span>
+    remoteaddress = @(<span style="color:#e6db74">&#39;130.230.0.0/16&#39;</span>)
+  }
+  ModuleName = @{
+    ModuleName      = <span style="color:#e6db74">&#34;C:/ProgramData/PuppetLabs/code/environments/production/modules/dsc/lib/puppet_x/dsc_resources/xNetworking/xNetworking.psd1&#34;</span>
+    RequiredVersion = <span style="color:#e6db74">&#34;5.1.0.0&#34;</span>
+  }
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>In order to get more information, we add the <code>Verbose</code> switch:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">PS C:\Users\Administrator\Desktop&gt; $invokeParams = @{
+  Verbose       = $true
+  Name          = <span style="color:#e6db74">&#39;xFirewall&#39;</span>
+  Method        = <span style="color:#e6db74">&#39;test&#39;</span>
+  Property      = @{
+    name = <span style="color:#e6db74">&#39;my_firewall&#39;</span>
+    enabled = <span style="color:#e6db74">&#39;True&#39;</span>
+    remoteaddress = @(<span style="color:#e6db74">&#39;130.230.0.0/16&#39;</span>)
+  }
+  ModuleName = @{
+    ModuleName      = <span style="color:#e6db74">&#34;C:/ProgramData/PuppetLabs/code/environments/production/modules/dsc/lib/puppet_x/dsc_resources/xNetworking/xNetworking.psd1&#34;</span>
+    RequiredVersion = <span style="color:#e6db74">&#34;5.1.0.0&#34;</span>
+  }
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>Then we execute that inside our PowerShell console (without using Puppet):</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">PS C:\Users\Administrator\Desktop&gt; $result = Invoke-DscResource @invokeParams
+VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> Perform operation <span style="color:#e6db74">&#39;Invoke CimMethod&#39;</span> with following parameters, <span style="color:#e6db74">&#39;&#39;</span>methodName<span style="color:#e6db74">&#39; = Resourcetest,&#39;</span>className<span style="color:#e6db74">&#39; = MSFT_DSCLocalConfigurationManager,&#39;</span>namespaceName<span style="color:#e6db74">&#39; = root/Microsoft/Windows/DesiredStateConfiguration&#39;</span>.
+VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> An LCM method call arrived from computer WINVAGR-MNSKSOE with user sid S-1-5-21-850066514-2495575711-3657759813-500.
+VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> [WINVAGR-MNSKSOE]<span style="color:#960050;background-color:#1e0010">:</span> LCM<span style="color:#960050;background-color:#1e0010">:</span>  [ Start  Test     ]  <span style="color:#66d9ef">[[xFirewall]DirectResourceAccess]</span>
+VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> [WINVAGR-MNSKSOE]<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">[[xFirewall]DirectResourceAccess]</span> Test-TargetResource<span style="color:#960050;background-color:#1e0010">:</span> Checking settings <span style="color:#66d9ef">for</span> firewall rule with Name <span style="color:#e6db74">&#39;my_firewall&#39;</span>.
+VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> [WINVAGR-MNSKSOE]<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">[[xFirewall]DirectResourceAccess]</span> Test-TargetResource<span style="color:#960050;background-color:#1e0010">:</span> Find firewall rule with Name <span style="color:#e6db74">&#39;my_firewall&#39;</span>.
+VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> [WINVAGR-MNSKSOE]<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">[[xFirewall]DirectResourceAccess]</span> Test-TargetResource<span style="color:#960050;background-color:#1e0010">:</span> Check each defined <span style="color:#66d9ef">parameter</span> against the existing firewall rule with Name <span style="color:#e6db74">&#39;my_firewall&#39;</span>.
+VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> [WINVAGR-MNSKSOE]<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">[[xFirewall]DirectResourceAccess]</span> Get-FirewallRuleProperty<span style="color:#960050;background-color:#1e0010">:</span> Get all the properties and add <span style="color:#66d9ef">filter</span> info to rule map.
+VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> [WINVAGR-MNSKSOE]<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">[[xFirewall]DirectResourceAccess]</span> Test-RuleProperties<span style="color:#960050;background-color:#1e0010">:</span> RemoteAddress property value <span style="color:#e6db74">&#39;130.230.0.0/255.255.0.0&#39;</span> does not match desired state <span style="color:#e6db74">&#39;130.230.0.0/16&#39;</span>.
+VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> [WINVAGR-MNSKSOE]<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">[[xFirewall]DirectResourceAccess]</span> Test-RuleProperties<span style="color:#960050;background-color:#1e0010">:</span> Test Firewall rule with Name <span style="color:#e6db74">&#39;my_firewall&#39;</span> returning False.
+VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> [WINVAGR-MNSKSOE]<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">[[xFirewall]DirectResourceAccess]</span> Test-TargetResource<span style="color:#960050;background-color:#1e0010">:</span> Check Firewall rule with Name <span style="color:#e6db74">&#39;my_firewall&#39;</span> returning False.
+VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> [WINVAGR-MNSKSOE]<span style="color:#960050;background-color:#1e0010">:</span> LCM<span style="color:#960050;background-color:#1e0010">:</span>  [ <span style="color:#66d9ef">End</span>    Test     ]  <span style="color:#66d9ef">[[xFirewall]DirectResourceAccess]</span> False <span style="color:#66d9ef">in</span> 0.6260 seconds.
+VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> [WINVAGR-MNSKSOE]<span style="color:#960050;background-color:#1e0010">:</span> LCM<span style="color:#960050;background-color:#1e0010">:</span>  [ <span style="color:#66d9ef">End</span>    Set      ]    <span style="color:#66d9ef">in</span>  0.6420 seconds.
+VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> Operation <span style="color:#e6db74">&#39;Invoke CimMethod&#39;</span> complete.
+VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> Time taken <span style="color:#66d9ef">for</span> configuration job to complete is 0.717 seconds</code></pre></td></tr></table>
+</div>
+</div>
+<p>This is a raw DSC run, doing the same exact stuff we had Puppet tell it to do before, with the addition of telling DSC to output <strong>VERBOSE</strong> information. Not all DSC Resources output <strong>VERBOSE</strong> information, it&rsquo;s not required so it will be hit and miss looking for it on other DSC Resources.</p>
+<p>We&rsquo;re lucky, this particular DSC Resource outputs useful information to the <strong>VERBOSE</strong> PowerShell data stream, so we can see which property is not in the desired state.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">VERBOSE<span style="color:#960050;background-color:#1e0010">:</span> [WINVAGR-MNSKSOE]<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">[[xFirewall]DirectResourceAccess]</span> Test-RuleProperties<span style="color:#960050;background-color:#1e0010">:</span> RemoteAddress property value <span style="color:#e6db74">&#39;130.230.0.0/255.255.0.0&#39;</span> does not match desired state <span style="color:#e6db74">&#39;130.230.0.0/16&#39;</span>.</code></pre></td></tr></table>
+</div>
+</div>
+<p>And we&rsquo;ve found our bug.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>There is something wrong in the way we&rsquo;re setting the value of <strong>RemoteAddress</strong>. We&rsquo;re saying it should be <code>130.230.0.0/16</code>, but it&rsquo;s being persisted as <code>130.230.0.0/255.255.0.0</code>. Knowing why this is happening requires further knowledge of how <strong>New-NetFirewallRule</strong> works and the evalautaion logic of the <strong>Test-TargetResource</strong> inside the <strong>xFirewall DSC Resource</strong>, but we&rsquo;ve shown the problem lies there and not in Puppet. The next step is to open a issue in the <strong>xNetworking</strong> Github repo and work with the team there to resolve the issue.</p>
+
+      </div>
+    </article>
+    <div class="">
+    </div>
+  </div>
+</div>
+<footer class="pt-10 pb-10">
+  <h1 class="text-center font-semibold">©2020 <a href="https://github.com/jpogran">James Pogran</a>.</h1>
+  <h1 class="text-center font-semibold pt-4 ">Powered by <a href="https://gohugo.com">Hugo</a> using the <a href="https://github.com/jpogran/exlibris">exlibris</a> theme</h1>
+  <script>
+    document.getElementById('nav-toggle').onclick = function(){
+      document.getElementById("nav-content").classList.toggle("hidden");
+      document.getElementById("social-content").classList.toggle("hidden");
+    }
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-74930020-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  
+</footer>
+</body>
+</html>

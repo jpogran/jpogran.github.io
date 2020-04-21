@@ -1,23 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://jamespogran.com/</loc>
-    <lastmod>2019-05-22T10:30:45-04:00</lastmod>
+    <lastmod>2020-04-08T14:13:06-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamespogran.com/media/</loc>
+    <lastmod>2020-04-08T14:13:06-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamespogran.com/media/new-puppet-vscode-extension/</loc>
+    <lastmod>2020-04-08T14:13:06-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamespogran.com/book/</loc>
+    <lastmod>2020-01-31T16:03:16-04:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jamespogran.com/book/powershell-conf-book-2/</loc>
+    <lastmod>2020-01-31T16:03:16-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamespogran.com/tags/powershell/</loc>
+    <lastmod>2019-05-22T10:30:45-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://jamespogran.com/tags/</loc>
     <lastmod>2019-05-22T10:30:45-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jamespogran.com/talk/</loc>
     <lastmod>2019-05-22T10:30:45-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -26,9 +49,18 @@
   </url>
   
   <url>
-    <loc>https://jamespogran.com/tags/powershell/</loc>
-    <lastmod>2019-05-22T10:30:45-04:00</lastmod>
-    <priority>0</priority>
+    <loc>https://jamespogran.com/tags/pdk/</loc>
+    <lastmod>2019-01-16T14:08:40-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamespogran.com/tags/presentation/</loc>
+    <lastmod>2019-01-16T14:08:40-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamespogran.com/tags/puppet/</loc>
+    <lastmod>2019-01-16T14:08:40-05:00</lastmod>
   </url>
   
   <url>
@@ -37,33 +69,18 @@
   </url>
   
   <url>
-    <loc>https://jamespogran.com/tags/pdk/</loc>
-    <lastmod>2019-01-16T14:08:40-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jamespogran.com/tags/presentation/</loc>
-    <lastmod>2019-01-16T14:08:40-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://jamespogran.com/tags/puppetconf/</loc>
     <lastmod>2019-01-16T14:08:40-05:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jamespogran.com/tags/puppetizelive/</loc>
     <lastmod>2019-01-16T14:08:40-05:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jamespogran.com/tags/vscode/</loc>
     <lastmod>2019-01-16T14:08:40-05:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -87,49 +104,38 @@
   </url>
   
   <url>
-    <loc>https://jamespogran.com/media/</loc>
-    <lastmod>2018-01-23T14:13:06-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jamespogran.com/puppet.com/blog/verify-spectre-meltdown-protections-remotely-puppet-bolt-windows</loc>
+    <loc>https://jamespogran.com/media/verify-spectre-meltdown-protections-remotely-puppet-bolt-windows/</loc>
     <lastmod>2018-01-23T14:13:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jamespogran.com/post/2017-10-19-diagnosing-dsc-and-puppet/</loc>
+    <loc>https://jamespogran.com/book/learning-powershell-dsc-second-edition/</loc>
+    <lastmod>2017-10-19T16:00:55-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamespogran.com/post/diagnosing-dsc-and-puppet/</loc>
+    <lastmod>2017-10-19T14:13:06-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamespogran.com/tags/dsc/</loc>
+    <lastmod>2017-10-19T14:13:06-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamespogran.com/series/featured/</loc>
     <lastmod>2017-10-19T14:13:06-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://jamespogran.com/post/</loc>
     <lastmod>2017-10-19T14:13:06-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://jamespogran.com/series/</loc>
     <lastmod>2017-10-19T14:13:06-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jamespogran.com/tags/dsc/</loc>
-    <lastmod>2017-10-19T14:13:06-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jamespogran.com/series/dsc/</loc>
-    <lastmod>2017-10-19T14:13:06-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jamespogran.com/tags/puppet/</loc>
-    <lastmod>2017-10-19T14:13:06-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -143,48 +149,47 @@
   </url>
   
   <url>
-    <loc>https://jamespogran.com/puppet.com/blog/announcing-puppet-visual-studio-code</loc>
+    <loc>https://jamespogran.com/media/announcing-puppet-visual-studio-code/</loc>
     <lastmod>2017-10-02T14:13:06-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jamespogran.com/post/2017-09-11-published-learning-powershell-dsc-second-edition/</loc>
-    <lastmod>2017-09-11T14:13:06-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://jamespogran.com/tags/book/</loc>
     <lastmod>2017-09-11T14:13:06-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jamespogran.com/puppet.com/blog/puppet-iis-module-now-puppet-supported</loc>
+    <loc>https://jamespogran.com/post/published-learning-powershell-dsc-second-edition/</loc>
+    <lastmod>2017-09-11T14:13:06-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamespogran.com/media/puppet-iis-module-now-puppet-supported/</loc>
     <lastmod>2017-06-17T14:13:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jamespogran.com/post/2017-06-07-puppetconf-2017/</loc>
+    <loc>https://jamespogran.com/post/puppetconf-2017/</loc>
     <lastmod>2017-06-07T14:13:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jamespogran.com/post/2017-04-04-second-edition-of-learning-powershell-dsc/</loc>
+    <loc>https://jamespogran.com/post/second-edition-of-learning-powershell-dsc/</loc>
     <lastmod>2017-04-04T14:13:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jamespogran.com/post/2016-03-16-deep-dive-puppet-dsc/</loc>
+    <loc>https://jamespogran.com/post/deep-dive-puppet-dsc/</loc>
     <lastmod>2017-03-16T14:13:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jamespogran.com/puppet.com/blog/managing-powershell-dsc-puppet</loc>
+    <loc>https://jamespogran.com/media/managing-powershell-dsc-puppet/</loc>
     <lastmod>2016-10-03T14:13:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jamespogran.com/puppet.com/blog/dsc-deep-dive-installing-and-configuring-iis-using-puppet-and-powershell-dsc</loc>
+    <loc>https://jamespogran.com/media/dsc-deep-dive-installing-and-configuring-iis-using-puppet-and-powershell-dsc/</loc>
     <lastmod>2016-04-16T14:13:06-04:00</lastmod>
   </url>
   
@@ -199,23 +204,28 @@
   </url>
   
   <url>
-    <loc>https://jamespogran.com/post/2016-01-27-puppet-book-blog-post/</loc>
+    <loc>https://jamespogran.com/post/puppet-book-blog-post/</loc>
     <lastmod>2016-01-27T14:13:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jamespogran.com/puppet.com/blog/powershell-dsc-module-now-supported</loc>
+    <loc>https://jamespogran.com/media/powershell-dsc-module-now-supported/</loc>
     <lastmod>2016-01-20T14:13:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jamespogran.com/post/2016-01-20-puppet-dsc-module-released/</loc>
+    <loc>https://jamespogran.com/post/puppet-dsc-module-released/</loc>
     <lastmod>2016-01-20T14:13:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jamespogran.com/post/2015-10-26-dsc-book-published/</loc>
+    <loc>https://jamespogran.com/post/dsc-book-published/</loc>
     <lastmod>2015-10-26T14:13:06-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamespogran.com/book/learning-powershell-dsc/</loc>
+    <lastmod>2015-10-19T16:01:03-04:00</lastmod>
   </url>
   
   <url>
@@ -224,32 +234,32 @@
   </url>
   
   <url>
-    <loc>https://jamespogran.com/post/2015-10-03-puppetconf-2015/</loc>
+    <loc>https://jamespogran.com/post/puppetconf-2015/</loc>
     <lastmod>2015-10-03T14:13:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jamespogran.com/post/2015-08-19-dsc-book-finished/</loc>
+    <loc>https://jamespogran.com/post/dsc-book-finished/</loc>
     <lastmod>2015-08-19T14:13:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jamespogran.com/post/2015-06-08-puppet-day-one/</loc>
+    <loc>https://jamespogran.com/post/puppet-day-one/</loc>
     <lastmod>2015-06-08T14:13:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jamespogran.com/post/2015-04-24-dsc-book/</loc>
+    <loc>https://jamespogran.com/post/dsc-book/</loc>
     <lastmod>2015-04-24T14:13:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jamespogran.com/post/2015-03-05-hello-world/</loc>
+    <loc>https://jamespogran.com/post/hello-world/</loc>
     <lastmod>2015-03-05T14:13:06-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jamespogran.com/post/2015-03-05-setting-up-things/</loc>
+    <loc>https://jamespogran.com/post/setting-up-things/</loc>
     <lastmod>2015-03-05T14:13:06-04:00</lastmod>
   </url>
   

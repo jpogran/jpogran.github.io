@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.66.0" />
+<meta name="description" content="">
+<meta name="author" content="James Pogran">
+<meta property="article:published_time" content="2015-10-19T16:01:03-04:00">
+<meta property="article:modified_time" content="2015-10-19T16:01:03-04:00">
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://jamespogran.com/img/learning_powershell_dsc_second_edition.png"/>
+
+<meta name="twitter:title" content="Learning Powershell DSC"/>
+<meta name="twitter:description" content="About Windows PowerShell is a task-based command-line shell and scripting language designed especially for system administration. PowerShell DSC is a new management platform that enables you to deploy and manage configuration data for software services and manage the environment in which these services run.
+This book begins with an overview of the basics of PowerShell DSC by covering the architecture and components of the Desired Sate Configuration. It will then familiarize you with the set of PowerShell language extensions and new PowerShell commands."/>
+
+<meta property="og:title" content="Learning Powershell DSC" />
+<meta property="og:description" content="About Windows PowerShell is a task-based command-line shell and scripting language designed especially for system administration. PowerShell DSC is a new management platform that enables you to deploy and manage configuration data for software services and manage the environment in which these services run.
+This book begins with an overview of the basics of PowerShell DSC by covering the architecture and components of the Desired Sate Configuration. It will then familiarize you with the set of PowerShell language extensions and new PowerShell commands." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jamespogran.com/book/learning-powershell-dsc/" />
+<meta property="og:image" content="https://jamespogran.com/img/learning_powershell_dsc_second_edition.png"/>
+<meta property="article:published_time" content="2015-10-19T16:01:03-04:00" />
+<meta property="article:modified_time" content="2015-10-19T16:01:03-04:00" />
+
+<title>Learning Powershell DSC | James Pogran</title>
+<link rel="icon" type="image/png" href="/img/icon.png">
+<link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+<link rel="canonical" href="https://jamespogran.com/book/learning-powershell-dsc/">
+
+<script src="https://kit.fontawesome.com/e1f83257d9.js" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://jamespogran.com/css/styles.min.ddfee0ed32caada2ea07de177f306ed00ca6c2a4778c6a802af4855313a086fe.css" integrity="sha256-3f7g7TLKraLqB94XfzBu0AymwqR3jGqAKvSFUxOghv4=">
+
+</head>
+<body class="antialiased font-serif bg-gray-200">
+<nav class="flex items-center justify-between flex-wrap p-10">
+  <div class="flex items-center flex-shrink-0 mr-6">
+    <a href="https://jamespogran.com/" class="no-underline">
+      <h1 class="font-semibold text-2xl tracking-tight">James Pogran</h1>
+    </a>
+  </div>
+  <div class="block lg:hidden xl:hidden">
+    <button id="dnav-toggle" class="block lg:hidden cursor-pointer ml-auto relative w-12 h-12 p-4">
+      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+    </button>
+  </div>
+  <div class="block lg:hidden">
+    <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
+      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+    </button>
+  </div>
+  <div id="nav-content" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="lg:flex-grow">
+    
+      <a class="no-underline text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 " href="/post" title="">Blog</a>
+    
+      <a class="no-underline text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 " href="/book" title="">Books</a>
+    
+      <a class="no-underline text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 " href="/talk" title="">Talks</a>
+    
+    </div>
+  </div>
+  <div>
+    <h1 class="tracking-tight text-gray-600 pr-10 sm:hidden md:hidden">Intersection of Prose and Technology</h1>
+  </div>
+  <div id="social-content">
+    
+    <a href="//twitter.com/ender2025" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
+      <i class="fab fa-lg fa-twitter" title="twitter"></i>
+    </a>
+    
+    
+    <a href="//github.com/jpogran" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
+      <i class="fab fa-lg fa-github" title="github"></i>
+    </a>
+    
+    
+    <a href="//stackoverflow.com/users/1083/james-pogran" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
+      <i class="fab fa-lg fa-stack-overflow" title="stackoverflow"></i>
+    </a>
+    
+    
+    <a href="//linkedin.com/in/jamespogran" class="block mt-4 lg:inline-block lg:mt-0 mr-2" target="_blank">
+      <i class="fab fa-lg fa-linkedin-in" title="linkedin"></i>
+    </a>
+    
+    
+  </div>
+</nav>
+
+<div class="container mx-auto px-4">
+  <div class="grid grid-cols-4 pt-10 pb-10">
+    <div class="col-span-1">
+      <img src="https://jamespogran.com/img/learning_powershell_dsc_first_edition.jpg">
+    </div>
+    <div class="col-span-3">
+      <article class="container mx-auto px-4">
+        <h1 class="font-bold text-6xl tracking-tight">Learning Powershell DSC</h1>
+        <h1 class="font-semibold text-gray-600 text-xl"></h1>
+        <h1 class="font-semibold text-gray-600 text-xl">Author </h1>
+        <h1 class="text-gray-500 text-sm">Published 2015-Oct-19</h1>
+        <div class="pt-4">
+          <h2 id="about">About</h2>
+<p>Windows PowerShell is a task-based command-line shell and scripting language designed especially for system administration. PowerShell DSC is a new management platform that enables you to deploy and manage configuration data for software services and manage the environment in which these services run.</p>
+<p>This book begins with an overview of the basics of PowerShell DSC by covering the architecture and components of the Desired Sate Configuration. It will then familiarize you with the set of PowerShell language extensions and new PowerShell commands. It will help you understand and create DSC configurations with the help of practical examples, and to create DSC custom resources for your custom applications. Finally, you will learn to deploy a real world application using PowerShell DSC. By the end of the book, you will have better knowledge about the powerful Desired State Configuration platform, which helps you to achieve continuous delivery, and efficient management and easy deployment of data for systems.</p>
+<h2 id="features">Features</h2>
+<p>Create flexible and maintainable deployments using DSC configuration scripts that stand the test of time
+Explore the in depth details of the core architecture, concepts, and practices used by PowerShell DSC
+A step-by-step guide that shows you how to start using and taking advantage of PowerShell DSC</p>
+
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+<footer class="pt-10 pb-10">
+  <h1 class="text-center font-semibold">©2020 <a href="https://github.com/jpogran">James Pogran</a>.</h1>
+  <h1 class="text-center font-semibold pt-4 ">Powered by <a href="https://gohugo.com">Hugo</a> using the <a href="https://github.com/jpogran/exlibris">exlibris</a> theme</h1>
+  <script>
+    document.getElementById('nav-toggle').onclick = function(){
+      document.getElementById("nav-content").classList.toggle("hidden");
+      document.getElementById("social-content").classList.toggle("hidden");
+    }
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-74930020-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  
+</footer>
+</body>
+</html>
