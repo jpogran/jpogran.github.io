@@ -6,6 +6,7 @@
     <description>Recent content in Tags on James Pogran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>Copyright © 2008–2020, James Pogran; all rights reserved</copyright>
     <lastBuildDate>Wed, 22 May 2019 10:30:45 -0400</lastBuildDate>
     
 	<atom:link href="https://jamespogran.com/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -35,15 +36,6 @@
       <pubDate>Wed, 16 Jan 2019 14:08:40 -0500</pubDate>
       
       <guid>https://jamespogran.com/tags/presentation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>puppet</title>
-      <link>https://jamespogran.com/tags/puppet/</link>
-      <pubDate>Wed, 16 Jan 2019 14:08:40 -0500</pubDate>
-      
-      <guid>https://jamespogran.com/tags/puppet/</guid>
       <description></description>
     </item>
     
@@ -80,6 +72,24 @@
       <pubDate>Thu, 19 Oct 2017 14:13:06 -0400</pubDate>
       
       <guid>https://jamespogran.com/tags/dsc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>featured</title>
+      <link>https://jamespogran.com/tags/featured/</link>
+      <pubDate>Thu, 19 Oct 2017 14:13:06 -0400</pubDate>
+      
+      <guid>https://jamespogran.com/tags/featured/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>puppet</title>
+      <link>https://jamespogran.com/tags/puppet/</link>
+      <pubDate>Thu, 19 Oct 2017 14:13:06 -0400</pubDate>
+      
+      <guid>https://jamespogran.com/tags/puppet/</guid>
       <description></description>
     </item>
     

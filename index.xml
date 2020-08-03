@@ -6,6 +6,7 @@
     <description>Recent content on James Pogran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>Copyright © 2008–2020, James Pogran; all rights reserved</copyright>
     <lastBuildDate>Wed, 08 Apr 2020 14:13:06 -0400</lastBuildDate>
     
 	<atom:link href="https://jamespogran.com/index.xml" rel="self" type="application/rss+xml" />
@@ -329,6 +330,17 @@ This book begins with an overview of the basics of PowerShell DSC by covering th
       
       <guid>https://jamespogran.com/post/setting-up-things/</guid>
       <description>Setting Up Things</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://jamespogran.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jamespogran.com/about/</guid>
+      <description>Principal Software Engineer @puppetlabs Co-founder https://pup.pt/ Author of Learning PowerShell DSC 2nd Edition and https://leanpub.com/psconfbook2  I am a Principal Software Engineer at Puppet helping to make Windows automation even better with Puppet.
+I helped make the Puppet VS Code Extension a reality, currently on the Bolt team on their PowerShell interface.
+I have been working with computers in some form or fashion for over 15 years. My first job was systems administration for a large military installation.</description>
     </item>
     
   </channel>
