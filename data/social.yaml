@@ -1,0 +1,11 @@
+- item: "github"
+  url: "https://github.com/jpogran"
+- item: "twitter"
+  url: "https://twitter.com/ender2025"
+- item: "linkedin"
+  url: "https://www.linkedin.com/in/jamespogran"
+- item: "stackoverflow"
+  url: "https://www.stackoverflow.com/users/1083"
+- item: "rss"
+  url: "index.xml"
+  internal:  true
