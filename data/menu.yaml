@@ -1,0 +1,8 @@
+- name: Home
+  link: /
+- name: Blog
+  link: /post
+- name: Books
+  link: /book
+- name: Talks
+  link: /talk
