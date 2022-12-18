@@ -3,8 +3,6 @@ title        = "James Pogran"
 author       = "James Pogran"
 copyright    = "Copyright © 2008–2020, James Pogran; all rights reserved"
 languageCode = "en-us"
-paginate     = 10
-theme        = "github.com/chipzoller/hugo-clarity"
 
 [permalinks]
   books = "/:title/"
