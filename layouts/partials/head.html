@@ -10,10 +10,7 @@
   resources.Minify }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
   {{ end }}
-  <script
-    src="https://kit.fontawesome.com/a85a5852d9.js"
-    crossorigin="anonymous"
-  ></script>
+  <script src="https://kit.fontawesome.com/a85a5852d9.js" crossorigin="anonymous"></script>
   {{ range .AlternativeOutputFormats -}} {{ printf `
   <link rel="%s" type="%s" href="%s" title="%s" />
   ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}}
