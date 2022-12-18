@@ -1,0 +1,10 @@
+<head>
+  <meta charset="utf-8">
+  <title>{{ block "title" . }}
+    <!-- Blocks may include default content. -->
+    {{ .Site.Title }}
+  {{ end }}</title>
+  {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+</head>
