@@ -1,7 +1,9 @@
-{{ define "main"}}
-    <main id="main">
-      <div>
-       <h1 id="title"><a href="{{ "" | relURL }}">Go Home</a></h1>
-      </div>
-    </main>
+{{ define "main" }}
+  <main class="container mx-auto" id="main">
+    <div>
+      <h1 id="title">
+        <a href="{{ .Site.BaseURL | absLangURL }}">Go Home</a>
+      </h1>
+    </div>
+  </main>
 {{ end }}

@@ -1,6 +1,27 @@
-<nav class="sidebar-nav">
-  {{ $currentPage := . }}
-  {{ range .Site.Menus.main }}
-  <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
-  {{ end }}
-</nav>
+<header class="">
+  <div class="flex justify-between">
+    <div class="p-4">
+      <a href="{{ .Site.BaseURL | absLangURL }}" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+        <i class="fa-solid fa-code"></i>
+      </a>
+    </div>
+    <nav class="flex justify-end pt-4 text-lg">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        {{- if or
+          ($currentPage.IsMenuCurrent "main" .)
+          ($currentPage.HasMenuCurrent "main" .)
+        -}}
+          <a class="pr-4 font-extrabold underline" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+        {{- else -}}
+          <a class="pr-4 hover:underline" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+        {{- end -}}
+      {{ end }}
+      <div class="pr-4">
+        <a href="https://github.com/jpogran" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+          <i class="fa-lg fa-brands fa-github pr-2"></i>
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
