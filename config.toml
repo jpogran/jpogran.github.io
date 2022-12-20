@@ -41,14 +41,3 @@ sectionPagesMenu = "main"
   # Set the collapsed mobile navigation to either appear from the left or the right
   mobileNavigation = "left" # if you prefer right change to 'right'
 
-[markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    hl_Lines = "--"
-    lineNoStart = 1
-    lineNos = true # always set to true # else line numbers won't show at all! even when you toggle them on in the UI
-    lineNumbersInTable = false
-    noClasses = false
-    style = "monokai"
-    tabWidth = 2
