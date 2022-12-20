@@ -1,0 +1,25 @@
+baseURL: "https://jpogran.github.io"
+title: "James Pogran"
+author: "James Pogran"
+copyright: "Copyright © 2008-2020, James Pogran; all rights reserved"
+languageCode: "en-us"
+enableRobotsTXT: true
+sectionPagesMenu: "main"
+
+permalinks:
+  books: "/:title/"
+  posts: "/:title/"
+  talks: "/:title/"
+
+taxonomies:
+  series: "series"
+  tags: "tags"
+
+params:
+  author: "James Pogran"
+  introDescription: "The intersection of Prose and Technology"
+  images: ["img/learning_powershell_dsc_second_edition.png"]
+  twitter: "@ender2025"
+  ga_analytics: "UA-74930020-1"
+  numberOfTagsShown: 14
+  mainSections: ["post", "talk"] # see config details here https://gohugo.io/functions/where/#mainsections
