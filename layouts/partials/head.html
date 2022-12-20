@@ -26,23 +26,25 @@
     {{- end }}"
   />
   {{- if .Site.IsServer -}}
-  {{ $seed := "weqklrjfmnk213409ufasdfhnlk3j4bladsfsl" }}{{ $random := delimit (shuffle (split (md5
-    $seed) "" )) ""
-  }}
-  {{ $style := resources.Get "main.css" | resources.PostCSS | resources.ExecuteAsTemplate (printf
-    "tailwind.dev.%s.css" $random) $random
-  -}}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+    {{ $seed := "weqklrjfmnk213409ufasdfhnlk3j4bladsfsl" }}{{ $random := delimit (shuffle (split (md5
+      $seed) "" )) ""
+    }}
+    {{ $style := resources.Get "main.css" | resources.PostCSS | resources.ExecuteAsTemplate (printf
+      "tailwind.dev.%s.css" $random) $random
+    -}}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
   {{- else -}}
-  {{ $style := resources.Get "main.css" | resources.PostCSS | resources.Minify }}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+    {{ $style := resources.Get "main.css" | resources.PostCSS | resources.Minify }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
   {{- end }}
+  {{ $highlight := resources.Get "style.css" | resources.PostCSS | resources.Minify }}
+  <link rel="stylesheet" href="{{ $highlight.RelPermalink }}" />
   <link href="https://hachyderm.io/@ender2025" rel="me" />
   <link href="https://github.com/jpogran" rel="me" />
   <link href="https://jpogran.github.io/" rel="me" />
 
   {{- range .AlternativeOutputFormats }}
-  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML -}}
   {{- end -}}
   {{- if hugo.IsProduction | or (eq site.Params.env "production") -}}
     {{- template "_internal/google_analytics.html" . -}}
@@ -50,4 +52,5 @@
     {{- template "_internal/twitter_cards.html" . -}}
   {{- end }}
   <script src="https://kit.fontawesome.com/a85a5852d9.js" crossorigin="anonymous"></script>
+
 </head>
