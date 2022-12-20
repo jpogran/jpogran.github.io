@@ -4,12 +4,34 @@ author: "James Pogran"
 copyright: "Copyright © 2008-2020, James Pogran; all rights reserved"
 languageCode: "en-us"
 enableRobotsTXT: true
-sectionPagesMenu: "main"
 
 permalinks:
   books: "/:title/"
   posts: "/:title/"
   talks: "/:title/"
+
+menu:
+  main:
+  - identifier: posts
+    name: Posts
+    title: Blogs I wrote
+    url: /post/
+    weight: -110
+  - identifier: books
+    name: Books
+    title: Books I wrote
+    url: /book/
+    weight: -100
+  - identifier: media
+    name: Media
+    title: Stuff I wrote elsewhere
+    url: /media/
+    weight: -90
+  - identifier: talks
+    name: Talks
+    title: Talks I presented
+    url: /talk/
+    weight: -80
 
 taxonomies:
   series: "series"
@@ -23,3 +45,15 @@ params:
   ga_analytics: "UA-74930020-1"
   numberOfTagsShown: 14
   mainSections: ["post", "talk"] # see config details here https://gohugo.io/functions/where/#mainsections
+
+markup:
+  markup.highlight:
+    codeFences: true
+    guessSyntax: true
+    hl_Lines: "--"
+    lineNoStart: 1
+    lineNos: true # always set to true # else line numbers won't show at all! even when you toggle them on in the UI
+    lineNumbersInTable: false
+    noClasses: false
+    style: "monokai"
+    tabWidth: 2

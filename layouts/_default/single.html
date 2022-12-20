@@ -1,12 +1,13 @@
 {{ define "main" }}
-  <section class="container mx-auto">
+<section class="p-4 sm:p-6">
+  <div class="mx-auto max-w-screen-xl">
     <article
-      class="prose prose-a:text-blue-600 prose-img:rounded-xl dark:prose-invert sm:prose-sm md:prose-lg lg:prose-xl"
-    >
+      class="prose prose-a:text-blue-600 prose-img:rounded-xl dark:prose-invert sm:prose-sm md:prose-lg lg:prose-xl">
       <h1 id="title">{{ .Title }}</h1>
       <h4 class="">{{ .Params.subtitle }}</h4>
       <img class="" src="{{ .Params.featureImage|absURL }}" />
       {{ .Content }}
     </article>
-  </section>
+  </div>
+</section>
 {{ end }}
