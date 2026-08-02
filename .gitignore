@@ -12,3 +12,5 @@
 *.out
 
 resources/
+public/
+.hugo_build.lock

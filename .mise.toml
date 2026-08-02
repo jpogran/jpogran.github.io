@@ -1,5 +1,5 @@
 [tools]
-hugo = "0.158.0"
+hugo = "latest"
 
 [env]
 HUGO_EXTENDED = "true"
