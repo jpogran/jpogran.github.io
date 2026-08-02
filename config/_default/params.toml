@@ -1,11 +1,11 @@
-colorScheme          = "congo"
+colorScheme          = "slate"
 defaultAppearance    = "auto"
 autoSwitchAppearance = true
 enableDarkModeToggle = true
 enableSearch         = true
 enableCodeCopy       = true
 mainSections         = ["post", "talk"]
-images               = ["img/logo_background.png"]
+images               = ["img/James-Pogran-avatar.jpg"]
 
 [social]
   twitter = "ender2025"
@@ -16,4 +16,10 @@ images               = ["img/logo_background.png"]
   recentLimit  = 10
 
 [article]
-  showReadingTime = false
+  showReadingTime     = false
+  showTableOfContents = true
+  showTaxonomies      = true
+  sharingLinks        = ["x-twitter", "linkedin", "bluesky", "reddit", "email"]
+
+[list]
+  showTableOfContents = true
