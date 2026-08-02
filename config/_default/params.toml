@@ -5,8 +5,15 @@ enableDarkModeToggle = true
 enableSearch         = true
 enableCodeCopy       = true
 mainSections         = ["post", "talk"]
+images               = ["img/logo_background.png"]
+
+[social]
+  twitter = "ender2025"
 
 [homepage]
-  layout = "profile"
-  showRecent        = true
-  showRecentItems   = 5
+  layout       = "custom"
+  showRecent   = true
+  recentLimit  = 10
+
+[article]
+  showReadingTime = false

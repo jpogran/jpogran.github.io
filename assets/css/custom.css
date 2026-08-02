@@ -2,3 +2,37 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   color: green;
 }
+
+/* Widen the reading column on individual post pages (header, body, footer)
+   without affecting list/taxonomy pages or the homepage article cards,
+   which also use Tailwind's max-w-prose utility. */
+article .max-w-prose {
+  max-width: 85ch;
+}
+
+/* Small floated author photo, eg. ![Name:left](avatar.jpg) in content,
+   used on the About page so body text wraps around it. */
+.avatar-float-start,
+.avatar-float-end {
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+.avatar-float-start {
+  float: left;
+  margin-inline-end: 1.5rem;
+}
+.avatar-float-end {
+  float: right;
+  margin-inline-start: 1.5rem;
+}
+@media (max-width: 640px) {
+  .avatar-float-start,
+  .avatar-float-end {
+    float: none;
+    display: block;
+    margin-inline: auto;
+  }
+}

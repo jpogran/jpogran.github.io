@@ -1,0 +1,1 @@
+I write about the stuff that comes up building and running developer platforms: Git/webhook infrastructure at scale, open source governance, language servers and protocols, and lately, how AI agents actually hold up against that work.

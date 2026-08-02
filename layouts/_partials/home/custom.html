@@ -1,0 +1,18 @@
+{{- $featured := where site.RegularPages "Params.series" "intersect" (slice "featured") }}
+<article class="flex flex-col items-center justify-center text-center">
+  {{ partial "profile.html" }}
+  <section class="prose dark:prose-invert">{{ .Content | emojify }}</section>
+</article>
+
+{{ with $featured }}
+  <section>
+    <h2 class="mt-8 text-2xl font-extrabold">Featured</h2>
+    {{ range . }}
+      {{ partial "article-link.html" . }}
+    {{ end }}
+  </section>
+{{ end }}
+
+<section>
+  {{ partial "recent-articles.html" . }}
+</section>
