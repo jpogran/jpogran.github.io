@@ -1,0 +1,18 @@
+baseURL                = "https://pogran.dev"
+title                  = "James Pogran"
+languageCode           = "en"
+defaultContentLanguage = "en"
+paginate               = 10
+copyright              = "Copyright © 2008–2025, James Pogran"
+
+[permalinks]
+  post = "/:title/"
+  talk = "/:title/"
+  book = "/:title/"
+
+[taxonomies]
+  series = "series"
+  tags   = "tags"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

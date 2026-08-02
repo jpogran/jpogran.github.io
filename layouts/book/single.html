@@ -1,0 +1,12 @@
+{{ define "main" }}
+  {{ partial "article.html" . }}
+
+  {{ with .Params.link }}
+    <div class="mt-8">
+      <a href="{{ . }}" class="!rounded-md !font-bold !no-underline px-4 py-2 bg-primary-600 text-neutral hover:bg-primary-500 dark:bg-primary-800 dark:hover:bg-primary-700"
+         target="_blank" rel="noopener noreferrer">
+        Buy on Amazon →
+      </a>
+    </div>
+  {{ end }}
+{{ end }}

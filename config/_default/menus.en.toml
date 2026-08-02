@@ -1,0 +1,19 @@
+[[main]]
+name    = "Blog"
+pageRef = "/post"
+weight  = 10
+
+[[main]]
+name    = "Books"
+pageRef = "/book"
+weight  = 20
+
+[[main]]
+name    = "Talks"
+pageRef = "/talk"
+weight  = 30
+
+[[main]]
+name    = "Media"
+pageRef = "/media"
+weight  = 40

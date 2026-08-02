@@ -1,0 +1,12 @@
+colorScheme          = "congo"
+defaultAppearance    = "auto"
+autoSwitchAppearance = true
+enableDarkModeToggle = true
+enableSearch         = true
+enableCodeCopy       = true
+mainSections         = ["post", "talk"]
+
+[homepage]
+  layout = "profile"
+  showRecent        = true
+  showRecentItems   = 5

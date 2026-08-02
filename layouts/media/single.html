@@ -1,0 +1,13 @@
+{{ define "main" }}
+  {{ with .Params.blogUrl }}
+    <div class="mb-6 p-4 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800">
+      <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-1">Originally published on</p>
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer"
+         class="text-lg font-semibold text-primary-600 dark:text-primary-400 hover:underline">
+        {{ $.Page.Params.blogName }}
+      </a>
+    </div>
+  {{ end }}
+
+  {{ partial "article.html" . }}
+{{ end }}

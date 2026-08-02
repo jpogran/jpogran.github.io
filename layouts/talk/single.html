@@ -1,0 +1,14 @@
+{{ define "main" }}
+  {{ partial "article.html" . }}
+
+  {{ with .Params.youtube }}
+    <div class="mt-8">
+      {{ partial "shortcodes/youtube.html" (dict "id" . "page" $.Page) }}
+    </div>
+  {{ end }}
+
+  {{ with .Params.speakerdeck }}
+    <div class="mt-8 speakerdeck-embed" data-id="{{ . }}" data-ratio="1.77777777777778"></div>
+    <script async src="//speakerdeck.com/assets/embed.js"></script>
+  {{ end }}
+{{ end }}

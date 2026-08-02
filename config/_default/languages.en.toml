@@ -1,0 +1,15 @@
+languageCode = "en"
+languageName = "English"
+weight       = 1
+
+[params.author]
+  name  = "James Pogran"
+  image = "img/James-Pogran-avatar.jpg"
+  headline = "The intersection of Prose and Technology"
+  links = [
+    { github        = "https://github.com/jpogran" },
+    { twitter       = "https://twitter.com/ender2025" },
+    { linkedin      = "https://www.linkedin.com/in/jamespogran" },
+    { stackoverflow = "https://stackoverflow.com/users/1083" },
+    { rss           = "/index.xml" },
+  ]
